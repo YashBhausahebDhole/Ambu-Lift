@@ -26,7 +26,9 @@
             android:fontFamily="sans-serif-smallcaps"
             android:gravity="center"
             android:text="Portal For Ambulance Booking"
-            android:textColor="@color/white"
+            android:textColor="#0E0E0E"
+            android:textColorHighlight="#13DCC4"
+            android:textColorHint="#000000"
             android:textSize="34sp"
             android:textStyle="bold" />
 
@@ -45,8 +47,9 @@
             android:drawablePadding="20dp"
             android:hint="Patient Name"
             android:padding="20dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white" />
+            android:textColor="#0E0E0E"
+            android:textColorHighlight="#13DCC4"
+            android:textColorHint="#000000" />
 
         <EditText
             android:id="@+id/ptmbno"
@@ -63,8 +66,9 @@
             android:hint="Patient Id"
             android:inputType="textWebEditText"
             android:padding="20dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white" />
+            android:textColor="#0E0E0E"
+            android:textColorHighlight="#13DCC4"
+            android:textColorHint="#000000" />
 
         <EditText
             android:id="@+id/ptmail"
@@ -81,8 +85,9 @@
             android:hint="Pick Up from"
             android:inputType="textEmailAddress"
             android:padding="20dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white" />
+            android:textColor="#0E0E0E"
+            android:textColorHighlight="#13DCC4"
+            android:textColorHint="#000000" />
 
         <EditText
             android:id="@+id/ptpass"
@@ -98,8 +103,9 @@
             android:hint="Nearest Hospital"
             android:inputType="text"
             android:padding="20dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white" />
+            android:textColor="#0E0E0E"
+            android:textColorHighlight="#13DCC4"
+            android:textColorHint="#000000" />
 
         <Spinner
             android:id="@+id/ambuspin"
@@ -118,13 +124,28 @@
             android:id="@+id/regbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/ambuspin"
+            android:layout_below="@id/editTextDate"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="22dp"
             android:layout_marginEnd="150dp"
             android:layout_marginBottom="8dp"
             android:backgroundTint="@color/design_default_color_secondary"
-            android:text="BOOK" />
+            android:text="BOOK"
+            android:textColor="#020202" />
+
+        <EditText
+            android:id="@+id/editTextDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ambuspin"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="8dp"
+            android:ems="10"
+            android:inputType="date"
+            android:textColor="#0E0E0E"
+            android:textColorHighlight="#13DCC4"
+            android:textColorHint="#000000" />
 
 
     </RelativeLayout>
