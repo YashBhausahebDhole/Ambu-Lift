@@ -45,8 +45,10 @@
             android:hint="EMS Certificate Number"
             android:inputType="text"
             android:padding="20dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white" />
+            android:shadowColor="#4C1B1B"
+            android:textColor="@color/black"
+            android:textColorHighlight="#1F0B0B"
+            android:textColorHint="#0B0505" />
 
         <EditText
             android:id="@+id/ptage"
@@ -63,8 +65,10 @@
             android:hint="Licence Number"
             android:inputType="text"
             android:padding="20dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white" />
+            android:shadowColor="#4C1B1B"
+            android:textColor="@color/black"
+            android:textColorHighlight="#1F0B0B"
+            android:textColorHint="#0B0505" />
 
         <TextView
             android:id="@+id/DRegi"
@@ -76,8 +80,11 @@
             android:layout_marginBottom="25dp"
             android:fontFamily="sans-serif-smallcaps"
             android:gravity="center"
+            android:shadowColor="#4C1B1B"
             android:text="Registration for Ambulance"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
+            android:textColorHighlight="#1F0B0B"
+            android:textColorHint="#0B0505"
             android:textSize="34sp"
             android:textStyle="bold" />
 
@@ -96,8 +103,10 @@
             android:drawablePadding="20dp"
             android:hint="Driver Name"
             android:padding="20dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white" />
+            android:shadowColor="#4C1B1B"
+            android:textColor="@color/black"
+            android:textColorHighlight="#1F0B0B"
+            android:textColorHint="#0B0505" />
 
         <EditText
             android:id="@+id/ptmbno"
@@ -114,8 +123,10 @@
             android:hint="Mobile Number"
             android:inputType="phone"
             android:padding="20dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white" />
+            android:shadowColor="#4C1B1B"
+            android:textColor="@color/black"
+            android:textColorHighlight="#1F0B0B"
+            android:textColorHint="#0B0505" />
 
         <EditText
             android:id="@+id/ptmail"
@@ -132,8 +143,10 @@
             android:hint="Email ID"
             android:inputType="textEmailAddress"
             android:padding="20dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white" />
+            android:shadowColor="#4C1B1B"
+            android:textColor="@color/black"
+            android:textColorHighlight="#1F0B0B"
+            android:textColorHint="#0B0505" />
 
         <EditText
             android:id="@+id/ptpass"
@@ -149,8 +162,10 @@
             android:hint="Password"
             android:inputType="text"
             android:padding="20dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white" />
+            android:shadowColor="#4C1B1B"
+            android:textColor="@color/black"
+            android:textColorHighlight="#1F0B0B"
+            android:textColorHint="#0B0505" />
 
         <EditText
             android:id="@+id/ptcpass"
@@ -166,8 +181,10 @@
             android:hint="Confirm Password"
             android:inputType="text"
             android:padding="20dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white" />
+            android:shadowColor="#4C1B1B"
+            android:textColor="@color/black"
+            android:textColorHighlight="#1F0B0B"
+            android:textColorHint="#0B0505" />
 
         <EditText
             android:id="@+id/RCNum"
@@ -183,8 +200,10 @@
             android:hint="RC Number"
             android:inputType="text"
             android:padding="20dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white" />
+            android:shadowColor="#4C1B1B"
+            android:textColor="@color/black"
+            android:textColorHighlight="#1F0B0B"
+            android:textColorHint="#0B0505" />
 
         <EditText
             android:id="@+id/Oname"
@@ -200,8 +219,10 @@
             android:drawablePadding="20dp"
             android:hint="Owner Name"
             android:padding="20dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white" />
+            android:textColor="@color/black"
+            android:textColorHint="#0B0505"
+            android:shadowColor="#4C1B1B"
+            android:textColorHighlight="#1F0B0B" />
 
         <RadioGroup
             android:layout_width="136dp"
@@ -236,9 +257,9 @@
             android:layout_below="@id/Oname"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="33dp"
-            android:layout_marginTop="61dp"
-            android:layout_marginEnd="40dp"
+            android:layout_marginTop="201dp"
 
+            android:layout_marginEnd="173dp"
             android:backgroundTint="@color/design_default_color_secondary"
             android:text="REGISTER" />
 

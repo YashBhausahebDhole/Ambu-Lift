@@ -26,7 +26,8 @@
             android:fontFamily="sans-serif-smallcaps"
             android:gravity="center"
             android:text="Emergency"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
+            android:textColorHint="#1B1010"
             android:textSize="30dp"
             android:textStyle="bold" />
 
@@ -45,8 +46,8 @@
             android:hint="Patient Name"
             android:inputType="text"
             android:padding="20dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white" />
+            android:textColor="@color/black"
+            android:textColorHint="#1B1010" />
 
         <EditText
             android:id="@+id/ptmbno"
@@ -63,8 +64,8 @@
             android:hint="Mobile Number"
             android:inputType="phone"
             android:padding="20dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white" />
+            android:textColor="@color/black"
+            android:textColorHint="#1B1010" />
 
 
         <EditText
@@ -82,8 +83,8 @@
             android:hint="Situation"
             android:inputType="text"
             android:padding="20dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white" />
+            android:textColor="@color/black"
+            android:textColorHint="#1B1010" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/regbtn"
@@ -95,7 +96,8 @@
             android:layout_marginTop="62dp"
             android:layout_marginEnd="20dp"
             android:backgroundTint="@color/design_default_color_secondary"
-            android:text="Confirm" />
+            android:text="Confirm"
+            android:textColor="#100707" />
 
         <Spinner
             android:id="@+id/ambuspin"

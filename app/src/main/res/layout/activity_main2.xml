@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/ScrollView01"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:fillViewport="true"
     android:scrollbars="none">
 
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:background="@drawable/background2"
+
 
         >
 
@@ -30,8 +31,9 @@
             android:hint="Address"
             android:inputType="text"
             android:padding="20dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white" />
+            android:textColor="@color/black"
+            android:textColorHighlight="#150A0A"
+            android:textColorHint="#0E0707" />
 
         <EditText
             android:id="@+id/ptage"
@@ -48,8 +50,9 @@
             android:hint="Age"
             android:inputType="number"
             android:padding="20dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white" />
+            android:textColor="@color/black"
+            android:textColorHighlight="#150A0A"
+            android:textColorHint="#0E0707" />
 
         <TextView
             android:id="@+id/DRegi"
@@ -62,7 +65,9 @@
             android:fontFamily="sans-serif-smallcaps"
             android:gravity="center"
             android:text="Registration for Patient"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
+            android:textColorHighlight="#150A0A"
+            android:textColorHint="#0E0707"
             android:textSize="34sp"
             android:textStyle="bold" />
 
@@ -81,8 +86,9 @@
             android:drawablePadding="20dp"
             android:hint="Patient  Name"
             android:padding="20dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white" />
+            android:textColor="@color/black"
+            android:textColorHighlight="#150A0A"
+            android:textColorHint="#0E0707" />
 
         <EditText
             android:id="@+id/ptmbno"
@@ -99,8 +105,9 @@
             android:hint="Mobile Number"
             android:inputType="phone"
             android:padding="20dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white" />
+            android:textColor="@color/black"
+            android:textColorHighlight="#150A0A"
+            android:textColorHint="#0E0707" />
 
         <EditText
             android:id="@+id/ptmail"
@@ -117,8 +124,9 @@
             android:hint="Email ID"
             android:inputType="textEmailAddress"
             android:padding="20dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white" />
+            android:textColor="@color/black"
+            android:textColorHighlight="#150A0A"
+            android:textColorHint="#0E0707" />
 
         <EditText
             android:id="@+id/ptpass"
@@ -134,8 +142,9 @@
             android:hint="Password"
             android:inputType="textPassword"
             android:padding="20dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white" />
+            android:textColor="@color/black"
+            android:textColorHighlight="#150A0A"
+            android:textColorHint="#0E0707" />
 
         <EditText
             android:id="@+id/ptcpass"
@@ -151,9 +160,14 @@
             android:hint="Confirm Password"
             android:inputType="textPassword"
             android:padding="20dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white" /><![CDATA[
+            android:textColor="@color/black"
+            android:textColorHighlight="#150A0A"
+            android:textColorHint="#0E0707" /><![CDATA[
         >
+
+
+
+
 
 
 
@@ -169,23 +183,28 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/ptage"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="212dp"
-            android:layout_marginEnd="150dp"
+            android:layout_marginTop="147dp"
+            android:layout_marginEnd="148dp"
             android:layout_marginBottom="8dp"
             android:backgroundTint="@color/design_default_color_secondary"
             android:onClick="Registerbuttonclicked"
-            android:text="REGISTER" />
+            android:text="REGISTER"
+            android:textColor="#1B0303"
+            android:textColorHighlight="#110404"
+            android:textColorLink="#2F0F0F" />
 
         <RadioGroup
             android:id="@+id/ptgender"
-            android:layout_width="136dp"
-            android:layout_height="109dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/ptage"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
             android:layout_marginStart="30dp"
             android:layout_marginTop="22dp"
-            android:layout_marginEnd="245dp">
+            android:layout_marginEnd="245dp"
+            android:textAlignment="viewEnd">
 
             <RadioButton
                 android:id="@+id/radioButton"
