@@ -112,7 +112,8 @@
             android:backgroundTint="@color/design_default_color_secondary"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textColorHint="@color/white" />
+            android:textColorHint="@color/white"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <Button
             android:id="@+id/button"
