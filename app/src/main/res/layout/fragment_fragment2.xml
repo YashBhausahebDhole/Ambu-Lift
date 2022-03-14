@@ -55,8 +55,8 @@
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="20dp"
             android:text="Sign in with"
-            android:textColor="@color/black"
-            android:textColorHint="#1B0303"
+            android:textColor="#0B0404"
+            android:textColorHint="#0D0606"
             android:textSize="16sp" />
 
         <Button
@@ -68,6 +68,7 @@
             android:layout_marginStart="109dp"
             android:layout_marginTop="56dp"
             android:text="Login"
+            android:textColor="#140A0A"
             app:backgroundTint="#1ECADF" />
 
         <TextView
@@ -82,7 +83,8 @@
             android:fontFamily="sans-serif-smallcaps"
             android:gravity="center"
             android:text="Sign in for Patient "
-            android:textColor="@color/white"
+            android:textColor="#0B0404"
+            android:textColorHint="#0D0606"
             android:textSize="34sp"
             android:textStyle="bold" />
 
@@ -100,8 +102,8 @@
             android:drawablePadding="20dp"
             android:hint="Email Address"
             android:padding="20dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white" />
+            android:textColor="#0B0404"
+            android:textColorHint="#0D0606" />
 
         <EditText
             android:id="@+id/plpass"
@@ -118,8 +120,8 @@
             android:hint="Password"
             android:inputType="textPassword"
             android:padding="20dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white" />
+            android:textColor="#0B0404"
+            android:textColorHint="#0D0606" />
 
 
         <TextView
@@ -133,7 +135,8 @@
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="20dp"
             android:text="Forgot password?"
-            android:textColor="@color/white"
+            android:textColor="#0B0404"
+            android:textColorHint="#0D0606"
             android:textSize="16sp" />
 
         <TextView
@@ -147,7 +150,8 @@
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="20dp"
             android:text="Register ?"
-            android:textColor="@color/white"
+            android:textColor="#0B0404"
+            android:textColorHint="#0D0606"
             android:textSize="16sp" />
 
 
