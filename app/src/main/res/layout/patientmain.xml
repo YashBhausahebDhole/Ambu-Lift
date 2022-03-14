@@ -25,7 +25,7 @@
             android:layout_marginBottom="25dp"
             android:fontFamily="sans-serif-smallcaps"
             android:gravity="center"
-            android:text="Portal For Ambulance Booking"
+            android:text="BOOK AMBULACE HERE"
             android:textColor="#0E0E0E"
             android:textColorHighlight="#13DCC4"
             android:textColorHint="#000000"
@@ -51,30 +51,13 @@
             android:textColorHighlight="#13DCC4"
             android:textColorHint="#000000" />
 
-        <EditText
-            android:id="@+id/ptmbno"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/ptname"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="0dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
-            android:background="#30ffffff"
-            android:drawableLeft="@drawable/ic_baseline_person_outline_24"
-            android:drawablePadding="20dp"
-            android:hint="Patient Id"
-            android:inputType="textWebEditText"
-            android:padding="20dp"
-            android:textColor="#0E0E0E"
-            android:textColorHighlight="#13DCC4"
-            android:textColorHint="#000000" />
+
 
         <EditText
             android:id="@+id/ptmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/ptmbno"
+            android:layout_below="@id/ptname"
             android:layout_marginStart="10dp"
             android:layout_marginTop="0dp"
             android:layout_marginEnd="10dp"
@@ -117,6 +100,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="20dp"
             android:backgroundTint="@color/design_default_color_secondary"
+            android:text="select ambulace"
             android:textColor="@color/white"
             android:textColorHint="@color/white" />
 
@@ -124,7 +108,7 @@
             android:id="@+id/regbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/editTextDate"
+            android:layout_below="@id/date"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="22dp"
             android:layout_marginEnd="150dp"
@@ -134,18 +118,24 @@
             android:textColor="#020202" />
 
         <EditText
-            android:id="@+id/editTextDate"
-            android:layout_width="match_parent"
+            android:id="@+id/date"
+            android:layout_width="393dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/ambuspin"
-            android:layout_marginTop="22dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginBottom="8dp"
-            android:ems="10"
-            android:inputType="date"
+            android:layout_below="@+id/ambuspin"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="10dp"
+            android:background="#30ffffff"
+            android:drawableLeft="@drawable/ic_baseline_info_24"
+            android:drawablePadding="20dp"
+            android:hint="DATE"
+            android:inputType="text"
+            android:padding="20dp"
             android:textColor="#0E0E0E"
             android:textColorHighlight="#13DCC4"
             android:textColorHint="#000000" />
+
+
 
 
     </RelativeLayout>
