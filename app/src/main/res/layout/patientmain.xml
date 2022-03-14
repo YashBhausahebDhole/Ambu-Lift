@@ -110,8 +110,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/date"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="22dp"
-            android:layout_marginEnd="150dp"
+            android:layout_marginTop="91dp"
+            android:layout_marginEnd="156dp"
             android:layout_marginBottom="8dp"
             android:backgroundTint="@color/design_default_color_secondary"
             android:text="BOOK"
@@ -123,7 +123,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/ambuspin"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="0dp"
+            android:layout_marginTop="16dp"
             android:layout_marginBottom="10dp"
             android:background="#30ffffff"
             android:drawableLeft="@drawable/ic_baseline_info_24"
@@ -134,8 +134,6 @@
             android:textColor="#0E0E0E"
             android:textColorHighlight="#13DCC4"
             android:textColorHint="#000000" />
-
-
 
 
     </RelativeLayout>
