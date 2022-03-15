@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background2"
+
+        >
+
+
+        <TextView
+            android:id="@+id/DRegi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="25dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:gravity="center"
+            android:text="Driver Main Portal"
+            android:textColor="#0E0E0E"
+            android:textColorHighlight="#13DCC4"
+            android:textColorHint="#000000"
+            android:textSize="34sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/ptname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/DRegi"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="#30ffffff"
+            android:drawableLeft="@drawable/ic_baseline_person_outline_24"
+            android:drawablePadding="20dp"
+            android:hint=" Driver Name"
+            android:textSize="18dp"
+            android:padding="20dp"
+            android:textColor="#0E0E0E"
+            android:textColorHighlight="#13DCC4"
+            android:textColorHint="#000000" />
+
+
+        <TextView
+            android:id="@+id/ptmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ptname"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#30ffffff"
+            android:drawableLeft="@android:drawable/ic_dialog_map"
+            android:drawablePadding="20dp"
+            android:textSize="18dp"
+            android:hint="Driver Id"
+
+            android:padding="20dp"
+            android:textColor="#0E0E0E"
+            android:textColorHighlight="#13DCC4"
+            android:textColorHint="#000000" />
+
+        <ToggleButton
+            android:id="@+id/ptpass"
+            android:layout_width="393dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ptmail"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="10dp"
+            android:background="#30ffffff"
+            android:drawableLeft="@drawable/ic_baseline_info_24"
+            android:drawablePadding="20dp"
+            android:hint="Activity Status"
+            android:padding="20dp"
+            android:textAlignment="center"
+            android:textColor="#0E0E0E"
+            android:textColorHighlight="#13DCC4"
+            android:textColorHint="#000000"
+            android:textOff="Active "
+            android:textOn="Deactive" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/regbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/actpat"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="91dp"
+            android:layout_marginEnd="156dp"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/design_default_color_secondary"
+            android:text="BOOK"
+            android:textColor="#020202" />
+
+        <TableLayout
+            android:id="@+id/actpat"
+            android:layout_width="261dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/ptpass"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="10dp"
+            android:background="#30ffffff"
+            android:drawableLeft="@drawable/ic_baseline_info_24"
+            android:drawablePadding="20dp"
+            android:autofillHints="Active Patient"
+            android:padding="20dp"
+            android:textAlignment="center"
+            android:textColor="#0E0E0E"
+            android:textColorHighlight="#13DCC4"
+            android:textColorHint="#000000">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="10dp"
+                android:background="#30ffffff"
+                android:drawableLeft="@drawable/ic_baseline_info_24"
+                android:drawablePadding="20dp"
+                android:hint="Active Patient name"
+                android:padding="20dp"
+                android:textAlignment="center"
+                android:textColor="#0E0E0E"
+                android:textColorHighlight="#13DCC4"
+                android:textColorHint="#000000" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="10dp"
+                android:background="#30ffffff"
+                android:drawableLeft="@drawable/ic_baseline_info_24"
+                android:drawablePadding="20dp"
+                android:hint="Active Patient name"
+                android:padding="20dp"
+                android:textAlignment="center"
+                android:textColor="#0E0E0E"
+                android:textColorHighlight="#13DCC4"
+                android:textColorHint="#000000"  />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="10dp"
+                android:background="#30ffffff"
+                android:drawableLeft="@drawable/ic_baseline_info_24"
+                android:drawablePadding="20dp"
+                android:hint="Active Patient name"
+                android:padding="20dp"
+                android:textAlignment="center"
+                android:textColor="#0E0E0E"
+                android:textColorHighlight="#13DCC4"
+                android:textColorHint="#000000"  />
+
+        </TableLayout>
+
+
+    </RelativeLayout>
+
+</ScrollView>

@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Ambu_Lift">
         <activity
+            android:name=".DriverPortal"
+            android:exported="false" />
+        <activity
             android:name=".forgotpass"
             android:exported="false" />
         <activity
