@@ -50,7 +50,7 @@
             android:textColorHint="#1B1010" />
 
         <EditText
-            android:id="@+id/ptmbno"
+            android:id="@+id/dno"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/patname"
@@ -72,7 +72,7 @@
             android:id="@+id/situ"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/ptmbno"
+            android:layout_below="@id/dno"
             android:layout_marginStart="10dp"
             android:layout_marginTop="2dp"
             android:layout_marginEnd="10dp"
@@ -87,7 +87,7 @@
             android:textColorHint="#1B1010" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/regbtn"
+            android:id="@+id/dreg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/button"

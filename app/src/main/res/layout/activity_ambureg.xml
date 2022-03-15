@@ -15,7 +15,7 @@
 
 
         <Spinner
-            android:id="@+id/spinner"
+            android:id="@+id/tyofambu"
             android:layout_width="400dp"
             android:layout_height="65dp"
             android:layout_below="@+id/DRegi"
@@ -31,10 +31,10 @@
             tools:ignore="SpeakableTextPresentCheck" />
 
         <EditText
-            android:id="@+id/ptaddress"
+            android:id="@+id/dems"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/ptcpass"
+            android:layout_below="@id/dcpass"
             android:layout_marginStart="10dp"
             android:layout_marginTop="0dp"
             android:layout_marginEnd="10dp"
@@ -51,10 +51,10 @@
             android:textColorHint="#0B0505" />
 
         <EditText
-            android:id="@+id/ptage"
+            android:id="@+id/dlic"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/ptaddress"
+            android:layout_below="@+id/dems"
             android:layout_marginStart="10dp"
             android:layout_marginTop="0dp"
             android:layout_marginEnd="10dp"
@@ -90,10 +90,10 @@
 
 
         <EditText
-            android:id="@+id/ptname"
+            android:id="@+id/dname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/spinner"
+            android:layout_below="@+id/tyofambu"
             android:layout_marginStart="8dp"
             android:layout_marginTop="30dp"
             android:layout_marginEnd="8dp"
@@ -109,10 +109,10 @@
             android:textColorHint="#0B0505" />
 
         <EditText
-            android:id="@+id/ptmbno"
+            android:id="@+id/dno"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/ptname"
+            android:layout_below="@+id/dname"
             android:layout_marginStart="10dp"
             android:layout_marginTop="0dp"
             android:layout_marginEnd="10dp"
@@ -129,10 +129,10 @@
             android:textColorHint="#0B0505" />
 
         <EditText
-            android:id="@+id/ptmail"
+            android:id="@+id/dmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/ptmbno"
+            android:layout_below="@id/dno"
             android:layout_marginStart="10dp"
             android:layout_marginTop="0dp"
             android:layout_marginEnd="10dp"
@@ -149,10 +149,10 @@
             android:textColorHint="#0B0505" />
 
         <EditText
-            android:id="@+id/ptpass"
+            android:id="@+id/dpass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/ptmail"
+            android:layout_below="@+id/dmail"
             android:layout_marginStart="10dp"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="10dp"
@@ -168,10 +168,10 @@
             android:textColorHint="#0B0505" />
 
         <EditText
-            android:id="@+id/ptcpass"
+            android:id="@+id/dcpass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/ptpass"
+            android:layout_below="@+id/dpass"
             android:layout_marginStart="10dp"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="10dp"
@@ -187,10 +187,10 @@
             android:textColorHint="#0B0505" />
 
         <EditText
-            android:id="@+id/RCNum"
+            android:id="@+id/drc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/ptage"
+            android:layout_below="@+id/dlic"
             android:layout_marginStart="10dp"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="10dp"
@@ -206,10 +206,10 @@
             android:textColorHint="#0B0505" />
 
         <EditText
-            android:id="@+id/Oname"
+            android:id="@+id/down"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/RCNum"
+            android:layout_below="@id/drc"
             android:layout_marginStart="8dp"
             android:layout_marginTop="3dp"
             android:layout_marginEnd="8dp"
@@ -219,15 +219,16 @@
             android:drawablePadding="20dp"
             android:hint="Owner Name"
             android:padding="20dp"
-            android:textColor="@color/black"
-            android:textColorHint="#0B0505"
             android:shadowColor="#4C1B1B"
-            android:textColorHighlight="#1F0B0B" />
+            android:textColor="@color/black"
+            android:textColorHighlight="#1F0B0B"
+            android:textColorHint="#0B0505" />
 
         <RadioGroup
+            android:id="@+id/awhom"
             android:layout_width="136dp"
             android:layout_height="109dp"
-            android:layout_below="@+id/Oname"
+            android:layout_below="@+id/down"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="76dp"
@@ -251,10 +252,10 @@
         </RadioGroup>
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/regbtn"
+            android:id="@+id/dreg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/Oname"
+            android:layout_below="@id/down"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="33dp"
             android:layout_marginTop="201dp"
@@ -263,6 +264,19 @@
             android:backgroundTint="@color/design_default_color_secondary"
             android:text="REGISTER"
             android:textColor="#210E0E" />
+
+        <ProgressBar
+            android:id="@+id/dpb"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="119dp"
+            android:layout_height="121dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="139dp"
+            android:layout_marginTop="391dp"
+            android:layout_marginEnd="153dp"
+            android:visibility="gone" />
 
 
     </RelativeLayout>

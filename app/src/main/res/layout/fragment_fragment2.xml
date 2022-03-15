@@ -19,7 +19,7 @@
             style="?android:attr/progressBarStyle"
             android:layout_width="137dp"
             android:layout_height="141dp"
-            android:layout_alignBottom="@+id/ptage"
+            android:layout_alignBottom="@+id/dlic"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_marginStart="116dp"
@@ -63,7 +63,7 @@
             android:id="@+id/logbtn"
             android:layout_width="191dp"
             android:layout_height="48dp"
-            android:layout_below="@+id/plpass"
+            android:layout_below="@+id/apass"
             android:layout_alignParentStart="true"
             android:layout_marginStart="109dp"
             android:layout_marginTop="56dp"
@@ -89,7 +89,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/plemail"
+            android:id="@+id/amail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/signin"
@@ -106,10 +106,10 @@
             android:textColorHint="#0D0606" />
 
         <EditText
-            android:id="@+id/plpass"
+            android:id="@+id/apass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/plemail"
+            android:layout_below="@id/amail"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"

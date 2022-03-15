@@ -2,7 +2,6 @@ package com.example.ambu_lift;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.preference.PreferenceGroup;
 import android.util.Patterns;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,8 +19,6 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-
-import java.util.regex.Pattern;
 
 
 public class fragment2 extends Fragment {
@@ -43,8 +40,8 @@ public class fragment2 extends Fragment {
         register = v.findViewById(R.id.paireg);
         logbtn = v.findViewById(R.id.logbtn);
         forgotpass=v.findViewById(R.id.forgotpass);
-        email=v.findViewById(R.id.plemail);
-        pass=v.findViewById(R.id.plpass);
+        email=v.findViewById(R.id.amail);
+        pass=v.findViewById(R.id.apass);
         progressBar=v.findViewById(R.id.progressBar3);
         mAuth=FirebaseAuth.getInstance();
 

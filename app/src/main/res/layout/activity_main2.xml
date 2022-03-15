@@ -17,10 +17,10 @@
 
 
         <EditText
-            android:id="@+id/ptaddress"
+            android:id="@+id/dems"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/ptcpass"
+            android:layout_below="@id/dcpass"
             android:layout_marginStart="10dp"
             android:layout_marginTop="0dp"
             android:layout_marginEnd="10dp"
@@ -36,10 +36,10 @@
             android:textColorHint="#0E0707" />
 
         <EditText
-            android:id="@+id/ptage"
+            android:id="@+id/dlic"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/ptaddress"
+            android:layout_below="@+id/dems"
             android:layout_marginStart="10dp"
             android:layout_marginTop="0dp"
             android:layout_marginEnd="10dp"
@@ -73,7 +73,7 @@
 
 
         <EditText
-            android:id="@+id/ptname"
+            android:id="@+id/dname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/DRegi"
@@ -91,10 +91,10 @@
             android:textColorHint="#0E0707" />
 
         <EditText
-            android:id="@+id/ptmbno"
+            android:id="@+id/dno"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/ptname"
+            android:layout_below="@+id/dname"
             android:layout_marginStart="10dp"
             android:layout_marginTop="0dp"
             android:layout_marginEnd="10dp"
@@ -110,10 +110,10 @@
             android:textColorHint="#0E0707" />
 
         <EditText
-            android:id="@+id/ptmail"
+            android:id="@+id/dmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/ptmbno"
+            android:layout_below="@id/dno"
             android:layout_marginStart="10dp"
             android:layout_marginTop="0dp"
             android:layout_marginEnd="10dp"
@@ -129,10 +129,10 @@
             android:textColorHint="#0E0707" />
 
         <EditText
-            android:id="@+id/ptpass"
+            android:id="@+id/dpass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/ptmail"
+            android:layout_below="@+id/dmail"
             android:layout_marginStart="10dp"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="10dp"
@@ -147,10 +147,10 @@
             android:textColorHint="#0E0707" />
 
         <EditText
-            android:id="@+id/ptcpass"
+            android:id="@+id/dcpass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/ptpass"
+            android:layout_below="@+id/dpass"
             android:layout_marginStart="10dp"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="10dp"
@@ -178,10 +178,10 @@
         ]]>
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/regbtn"
+            android:id="@+id/dreg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/ptage"
+            android:layout_below="@+id/dlic"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="147dp"
             android:layout_marginEnd="148dp"
@@ -197,7 +197,7 @@
             android:id="@+id/ptgender"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/ptage"
+            android:layout_below="@+id/dlic"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
@@ -228,7 +228,7 @@
             style="?android:attr/progressBarStyle"
             android:layout_width="137dp"
             android:layout_height="141dp"
-            android:layout_alignBottom="@+id/ptage"
+            android:layout_alignBottom="@+id/dlic"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"

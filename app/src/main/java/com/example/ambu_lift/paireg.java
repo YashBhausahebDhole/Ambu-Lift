@@ -37,15 +37,15 @@ public class paireg extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
        mAuth = FirebaseAuth.getInstance();
-        ptname=findViewById(R.id.ptname);
-        ptmbno=findViewById(R.id.ptmbno);
-        ptmail=findViewById(R.id.ptmail);
-        ptpass=findViewById(R.id.ptpass);
-        ptcpass=findViewById(R.id.ptcpass);
-        ptaddress=findViewById(R.id.ptaddress);
-        ptage=findViewById(R.id.ptage);
+        ptname=findViewById(R.id.dname);
+        ptmbno=findViewById(R.id.dno);
+        ptmail=findViewById(R.id.dmail);
+        ptpass=findViewById(R.id.dpass);
+        ptcpass=findViewById(R.id.dcpass);
+        ptaddress=findViewById(R.id.dems);
+        ptage=findViewById(R.id.dlic);
         ptgender=findViewById(R.id.ptgender);
-        register=findViewById(R.id.regbtn);
+        register=findViewById(R.id.dreg);
         progressBar=findViewById(R.id.progressBar2);
 
 
@@ -89,7 +89,7 @@ public class paireg extends AppCompatActivity {
                  ptpass.requestFocus();
              }
              if(pcpass.isEmpty() || pcpass.length() < 8){
-                 ptcpass.setError("Please Enter Confirm Password");
+                 ptcpass.setError("Please Enter Password containing atleast 8 digit");
                  ptcpass.requestFocus();
              }
              if(!pcpass.equals(ppass)){

@@ -34,7 +34,7 @@
 
 
         <TextView
-            android:id="@+id/ptname"
+            android:id="@+id/dname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/DRegi"
@@ -54,10 +54,10 @@
 
 
         <TextView
-            android:id="@+id/ptmail"
+            android:id="@+id/dmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/ptname"
+            android:layout_below="@id/dname"
             android:layout_marginStart="10dp"
             android:layout_marginTop="0dp"
             android:layout_marginEnd="10dp"
@@ -74,10 +74,10 @@
             android:textColorHint="#000000" />
 
         <ToggleButton
-            android:id="@+id/ptpass"
+            android:id="@+id/dpass"
             android:layout_width="393dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/ptmail"
+            android:layout_below="@+id/dmail"
             android:layout_marginStart="10dp"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="10dp"
@@ -94,7 +94,7 @@
             android:textOn="Deactive" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/regbtn"
+            android:id="@+id/dreg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/actpat"
@@ -110,7 +110,7 @@
             android:id="@+id/actpat"
             android:layout_width="261dp"
             android:layout_height="60dp"
-            android:layout_below="@+id/ptpass"
+            android:layout_below="@+id/dpass"
             android:layout_marginStart="72dp"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="10dp"
