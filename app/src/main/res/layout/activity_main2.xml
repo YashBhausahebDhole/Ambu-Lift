@@ -204,7 +204,8 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="22dp"
             android:layout_marginEnd="245dp"
-            android:textAlignment="viewEnd">
+            android:layout_gravity="center_horizontal"
+          >
 
             <RadioButton
                 android:id="@+id/radioButton"
