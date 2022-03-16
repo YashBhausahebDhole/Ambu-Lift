@@ -90,7 +90,7 @@
             android:id="@+id/dreg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/button"
+            android:layout_below="@+id/locbtn"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="20dp"
             android:layout_marginTop="62dp"
@@ -116,7 +116,7 @@
             tools:ignore="SpeakableTextPresentCheck" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/locbtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/ambuspin"
