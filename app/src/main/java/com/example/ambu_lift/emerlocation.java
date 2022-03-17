@@ -24,6 +24,7 @@ public class emerlocation extends AppCompatActivity {
 
     SupportMapFragment supportMapFragment;
     FusedLocationProviderClient client;
+    GoogleMap mMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

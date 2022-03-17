@@ -24,4 +24,6 @@
         <item>Mortuary Ambulance</item>
         <item>Neonatal Ambulance</item>
     </string-array>
+    <string name="title_activity_emerloca">Patient Location</string>
+    <string name="title_activity_maps">MapsActivity</string>
 </resources>
