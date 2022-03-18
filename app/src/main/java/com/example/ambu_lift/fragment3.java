@@ -34,7 +34,7 @@ public class fragment3 extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
-        Intent intent = new Intent(getActivity(), ambureg.class);
+        Intent intent = new Intent(getActivity(), ambulance_registration.class);
         startActivity(intent);
 
     }

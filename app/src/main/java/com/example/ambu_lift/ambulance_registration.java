@@ -1,5 +1,8 @@
 package com.example.ambu_lift;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
@@ -13,16 +16,13 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class ambureg extends AppCompatActivity {
+public class ambulance_registration extends AppCompatActivity {
 
     EditText dname,dno,dmail,dcpass,dpass,dems,dlic,drc,down;
     RadioGroup awhom;
@@ -30,13 +30,10 @@ public class ambureg extends AppCompatActivity {
     ProgressBar dpb;
     Spinner tyofambu;
     private FirebaseAuth mAuth;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ambureg);
-
-        mAuth = FirebaseAuth.getInstance();
+        setContentView(R.layout.ambulance_registration); mAuth = FirebaseAuth.getInstance();
         dname=findViewById(R.id.dname);
         dno=findViewById(R.id.empaino);
         dmail=findViewById(R.id.dmail);
@@ -52,12 +49,12 @@ public class ambureg extends AppCompatActivity {
         tyofambu = findViewById(R.id.tyofambu);
 
         //spinner
-        ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(ambureg.this,
+        ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(ambulance_registration.this,
                 android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.names));
         myAdapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
         tyofambu.setAdapter(myAdapter);
 
-       //button
+        //button
         dreg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -128,7 +125,7 @@ public class ambureg extends AppCompatActivity {
                     down.requestFocus();
                 }
                 if(cwhom.isEmpty()){
-                    Toast.makeText(ambureg.this, "Please Select the Ambulance is own or rent", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ambulance_registration.this, "Please Select the Ambulance is own or rent", Toast.LENGTH_SHORT).show();
                 }
 
 
@@ -148,25 +145,25 @@ public class ambureg extends AppCompatActivity {
                                         @Override
                                         public void onComplete(@NonNull Task<Void> task) {
                                             if (task.isSuccessful()) {
-                                                Toast.makeText(ambureg.this, "Driver is Registered Successfully", Toast.LENGTH_SHORT).show();
+                                                Toast.makeText(ambulance_registration.this, "Driver is Registered Successfully", Toast.LENGTH_SHORT).show();
                                                 dpb.setVisibility(View.GONE);
-                                                Intent intent = new Intent(ambureg.this, fragment3.class);
+                                                Intent intent = new Intent(ambulance_registration.this, fragment3.class);
                                                 startActivity(intent);
                                             } else {
-                                                Toast.makeText(ambureg.this, "Driver is fail to Register ", Toast.LENGTH_SHORT).show();
+                                                Toast.makeText(ambulance_registration.this, "Driver is fail to Register ", Toast.LENGTH_SHORT).show();
                                                 dpb.setVisibility(View.GONE);
                                             }
                                         }
 
                                     });
                                 } else {
-                                    Toast.makeText(ambureg.this, "Patient is fail to Register ", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(ambulance_registration.this, "Patient is fail to Register ", Toast.LENGTH_SHORT).show();
                                     dpb.setVisibility(View.GONE);
                                 }
 
                             }
 
-            });
-        }
-    });
-}}
+                        });
+            }
+        });
+    }}
