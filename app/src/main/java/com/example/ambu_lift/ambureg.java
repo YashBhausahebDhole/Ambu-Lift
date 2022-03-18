@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -39,14 +38,14 @@ public class ambureg extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
         dname=findViewById(R.id.dname);
-        dno=findViewById(R.id.dno);
+        dno=findViewById(R.id.empaino);
         dmail=findViewById(R.id.dmail);
         dpass=findViewById(R.id.dpass);
         dcpass=findViewById(R.id.dcpass);
         dems=findViewById(R.id.dems);
         dlic=findViewById(R.id.dlic);
         awhom=findViewById(R.id.awhom);
-        dreg=findViewById(R.id.dreg);
+        dreg=findViewById(R.id.confirmpai);
         drc=findViewById(R.id.drc);
         down=findViewById(R.id.down);
         dpb=findViewById(R.id.dpb);

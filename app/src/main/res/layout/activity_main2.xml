@@ -91,7 +91,7 @@
             android:textColorHint="#0E0707" />
 
         <EditText
-            android:id="@+id/dno"
+            android:id="@+id/empaino"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/dname"
@@ -113,7 +113,7 @@
             android:id="@+id/dmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/dno"
+            android:layout_below="@id/empaino"
             android:layout_marginStart="10dp"
             android:layout_marginTop="0dp"
             android:layout_marginEnd="10dp"
@@ -178,7 +178,7 @@
         ]]>
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/dreg"
+            android:id="@+id/confirmpai"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/dlic"

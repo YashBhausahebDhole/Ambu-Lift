@@ -32,7 +32,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/patname"
+            android:id="@+id/empainame"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/signin"
@@ -50,10 +50,10 @@
             android:textColorHint="#1B1010" />
 
         <EditText
-            android:id="@+id/dno"
+            android:id="@+id/empaino"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/patname"
+            android:layout_below="@id/empainame"
             android:layout_marginStart="10dp"
             android:layout_marginTop="2dp"
             android:layout_marginEnd="10dp"
@@ -69,10 +69,10 @@
 
 
         <EditText
-            android:id="@+id/situ"
+            android:id="@+id/situation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/dno"
+            android:layout_below="@id/empaino"
             android:layout_marginStart="10dp"
             android:layout_marginTop="2dp"
             android:layout_marginEnd="10dp"
@@ -87,7 +87,7 @@
             android:textColorHint="#1B1010" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/dreg"
+            android:id="@+id/confirmpai"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/locbtn"
@@ -103,7 +103,7 @@
             android:id="@+id/ambuspin"
             android:layout_width="400dp"
             android:layout_height="65dp"
-            android:layout_below="@+id/situ"
+            android:layout_below="@+id/situation"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="20dp"
             android:layout_marginTop="2dp"

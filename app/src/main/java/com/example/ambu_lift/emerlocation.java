@@ -2,9 +2,14 @@ package com.example.ambu_lift;
 
 import android.Manifest;
 import android.app.Activity;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -22,11 +27,14 @@ import com.google.android.gms.tasks.OnSuccessListener;
 public class emerlocation extends AppCompatActivity {
     FusedLocationProviderClient client;
     SupportMapFragment supportMapFragment;
-
+    Button conloc;
+    TextView textView;
     /* access modifiers changed from: protected */
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.emerlocation);
+        conloc=findViewById(R.id.conloc);
+
         this.supportMapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.google_map);
         this.client = LocationServices.getFusedLocationProviderClient((Activity) this);
         if (ActivityCompat.checkSelfPermission(this, "android.permission.ACCESS_FINE_LOCATION") == 0) {
@@ -52,10 +60,26 @@ public class emerlocation extends AppCompatActivity {
                 if (location != null) {
                     emerlocation.this.supportMapFragment.getMapAsync(new OnMapReadyCallback() {
                         public void onMapReady(GoogleMap googleMap) {
+
                             LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
                             MarkerOptions options = new MarkerOptions().position(latLng).title("Patient Location");
                             googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 15.0f));
                             googleMap.addMarker(options);
+                            conloc.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                    String lon=(String.valueOf(location.getLongitude()));
+                                    String lat=(String.valueOf(location.getLatitude()));
+
+                                    Toast.makeText(emerlocation.this, "Patient Location Fetched Successfully"+"\nLatitude= "+lat+"\nLongitude= "+lon  , Toast.LENGTH_SHORT).show();
+                                    Intent intent=new Intent(emerlocation.this,fragment1.class);
+                                    intent.putExtra("Lat",lat);
+                                    intent.putExtra("Long",lon);
+                                    startActivity(intent);
+
+
+                                }
+                            });
                         }
                     });
                 }

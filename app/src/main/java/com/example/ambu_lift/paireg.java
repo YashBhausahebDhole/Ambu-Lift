@@ -38,14 +38,14 @@ public class paireg extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
        mAuth = FirebaseAuth.getInstance();
         ptname=findViewById(R.id.dname);
-        ptmbno=findViewById(R.id.dno);
+        ptmbno=findViewById(R.id.empaino);
         ptmail=findViewById(R.id.dmail);
         ptpass=findViewById(R.id.dpass);
         ptcpass=findViewById(R.id.dcpass);
         ptaddress=findViewById(R.id.dems);
         ptage=findViewById(R.id.dlic);
         ptgender=findViewById(R.id.ptgender);
-        register=findViewById(R.id.dreg);
+        register=findViewById(R.id.confirmpai);
         progressBar=findViewById(R.id.progressBar2);
 
 

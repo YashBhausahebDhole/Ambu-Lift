@@ -78,7 +78,7 @@
             android:textColorHint="#1B1010" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/dreg"
+            android:id="@+id/confirmpai"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/apass"
@@ -95,7 +95,7 @@
             android:id="@+id/forgotpass"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/dreg"
+            android:layout_below="@id/confirmpai"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
