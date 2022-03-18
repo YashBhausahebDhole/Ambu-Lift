@@ -53,8 +53,8 @@ public class emerlocation extends AppCompatActivity {
                     emerlocation.this.supportMapFragment.getMapAsync(new OnMapReadyCallback() {
                         public void onMapReady(GoogleMap googleMap) {
                             LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
-                            MarkerOptions options = new MarkerOptions().position(latLng).title("I am there");
-                            googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 10.0f));
+                            MarkerOptions options = new MarkerOptions().position(latLng).title("Patient Location");
+                            googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 15.0f));
                             googleMap.addMarker(options);
                         }
                     });
