@@ -26,7 +26,7 @@ public class fragment1 extends Fragment {
         locbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(getActivity(),emerloca.class);
+                Intent intent=new Intent(getActivity(),emerlocation.class);
                 startActivity(intent);
             }
         });

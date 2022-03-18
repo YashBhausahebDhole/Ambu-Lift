@@ -2,8 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.ambu_lift">
 
+    <uses-sdk android:minSdkVersion="23" android:targetSdkVersion="29"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.INTERNET" />
+
 
     <application
         android:allowBackup="true"
@@ -27,13 +31,9 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyB1o6bWAzoXpiltjsBFv9j943pbFC-dMms" />
-
-
         <activity
-            android:name=".emerloca"
-            android:exported="false"
-            android:label="@string/title_activity_emerloca" />
-        <activity android:name=".emerlocation" />
+            android:name=".emerlocation"
+            android:exported="false" />
         <activity
             android:name=".DriverPortal"
             android:exported="false" />
