@@ -1,135 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_width="match_parent">
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
 
-    <RelativeLayout
-        android:id="@+id/patientregistration"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+    <TextView
+        android:id="@+id/DRegi"
+        android:layout_width="408dp"
+        android:layout_height="119dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="2dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:gravity="center"
+        android:text="Emergency"
+        android:textColor="@color/black"
+        android:textColorHighlight="#150A0A"
+        android:textColorHint="#0E0707"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/Book"
+        android:layout_width="256dp"
+        android:layout_height="63dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+
+        android:layout_marginStart="77dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="78dp"
+        android:backgroundTint="#33DBC2"
+        android:text="BOOK"
+        android:textColor="#221D1D"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DRegi"
+        app:rippleColor="#D00D0D" />
+
+    <TextView
+        android:id="@+id/Regi"
+        android:layout_width="173dp"
+        android:layout_height="46dp"
+        android:layout_below="@+id/conloc"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="119dp"
+        android:fontFamily="sans-serif-smallcaps"
 
         android:gravity="center"
-        tools:context=".MainActivity">
+        android:text="or"
+        android:textColor="@color/black"
+        android:textColorHint="#0E0707"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Book" />
 
-        <TextView
-            android:id="@+id/signin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="50dp"
-            android:layout_marginBottom="50dp"
-            android:fontFamily="sans-serif-smallcaps"
-            android:gravity="center"
-            android:text="Emergency"
-            android:textColor="@color/black"
-            android:textColorHint="#1B1010"
-            android:textSize="30dp"
-            android:textStyle="bold" />
+    <Button
+        android:id="@+id/conloc"
+        android:layout_width="256dp"
+        android:layout_height="63dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
 
-        <EditText
-            android:id="@+id/empainame"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/signin"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="0dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
-            android:background="#30ffffff"
-            android:drawableLeft="@drawable/ic_baseline_person_outline_24"
-            android:drawablePadding="20dp"
-            android:hint="Patient Name"
-            android:inputType="text"
-            android:padding="20dp"
-            android:textColor="@color/black"
-            android:textColorHint="#1B1010" />
-
-        <EditText
-            android:id="@+id/empaino"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/empainame"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="2dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
-            android:background="#30ffffff"
-            android:drawableLeft="@android:drawable/stat_sys_phone_call"
-            android:drawablePadding="20dp"
-            android:hint="Mobile Number"
-            android:inputType="phone"
-            android:padding="20dp"
-            android:textColor="@color/black"
-            android:textColorHint="#1B1010" />
+        android:layout_marginStart="77dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="78dp"
+        android:backgroundTint="#33DBC2"
+        android:text="Call"
+        android:textColor="#221D1D"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Regi"
+        app:rippleColor="#D00D0D" />
 
 
-        <EditText
-            android:id="@+id/situation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/empaino"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="2dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
-            android:background="#30ffffff"
-            android:drawableLeft="@android:drawable/ic_input_add"
-            android:drawablePadding="20dp"
-            android:hint="Situation"
-            android:inputType="text"
-            android:padding="20dp"
-            android:textColor="@color/black"
-            android:textColorHint="#1B1010" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/confirmpai"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/locbtn"
-            android:layout_centerHorizontal="true"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="62dp"
-            android:layout_marginEnd="20dp"
-            android:backgroundTint="@color/design_default_color_secondary"
-            android:text="Confirm"
-            android:textColor="#100707" />
-
-        <Spinner
-            android:id="@+id/ambuspin"
-            android:layout_width="400dp"
-            android:layout_height="65dp"
-            android:layout_below="@+id/situation"
-            android:layout_centerHorizontal="true"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="2dp"
-            android:layout_marginEnd="20dp"
-            android:background="#30FFFFFF"
-            android:backgroundTint="@color/design_default_color_secondary"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-        <Button
-            android:id="@+id/locbtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/ambuspin"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="87dp"
-            android:layout_marginTop="58dp"
-            android:layout_marginEnd="81dp"
-            android:foregroundGravity="center"
-            android:text="Location"
-            android:textSize="20sp"
-            app:backgroundTint="#CC1B1B"
-            app:icon="@android:drawable/ic_menu_mylocation" />
-    </RelativeLayout>
-
-</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

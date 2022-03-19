@@ -13,6 +13,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
@@ -28,12 +30,13 @@ public class emerlocation extends AppCompatActivity {
     FusedLocationProviderClient client;
     SupportMapFragment supportMapFragment;
     Button conloc;
-    TextView textView;
+
     /* access modifiers changed from: protected */
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.emerlocation);
         conloc=findViewById(R.id.conloc);
+
 
         this.supportMapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.google_map);
         this.client = LocationServices.getFusedLocationProviderClient((Activity) this);
@@ -65,18 +68,19 @@ public class emerlocation extends AppCompatActivity {
                             MarkerOptions options = new MarkerOptions().position(latLng).title("Patient Location");
                             googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 15.0f));
                             googleMap.addMarker(options);
+
+
                             conloc.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {
                                     String lon=(String.valueOf(location.getLongitude()));
                                     String lat=(String.valueOf(location.getLatitude()));
+                                    Toast.makeText(emerlocation.this, "Patient Location Fetched Successfully"+"\nLatitude= "+lat+"\nLongitude= "+lon, Toast.LENGTH_SHORT).show();
 
-                                    Toast.makeText(emerlocation.this, "Patient Location Fetched Successfully"+"\nLatitude= "+lat+"\nLongitude= "+lon  , Toast.LENGTH_SHORT).show();
-                                    Intent intent=new Intent(emerlocation.this,fragment1.class);
-                                    intent.putExtra("Lat",lat);
-                                    intent.putExtra("Long",lon);
+                                    Intent intent=new Intent(emerlocation.this,EmergencyBook.class);
+                                    intent.putExtra("Lati",lat);
+                                    intent.putExtra("Longi",lon);
                                     startActivity(intent);
-
 
                                 }
                             });

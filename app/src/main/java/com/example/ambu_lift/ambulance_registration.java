@@ -157,7 +157,7 @@ public class ambulance_registration extends AppCompatActivity {
 
                                     });
                                 } else {
-                                    Toast.makeText(ambulance_registration.this, "Patient is fail to Register ", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(ambulance_registration.this, "Driver is fail to Register ", Toast.LENGTH_SHORT).show();
                                     dpb.setVisibility(View.GONE);
                                 }
 

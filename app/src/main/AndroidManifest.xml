@@ -19,6 +19,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Ambu_Lift">
         <activity
+            android:name=".EmergencyBook"
+            android:exported="false" />
+        <activity
             android:name=".ambulance_registration"
             android:exported="false" />
         <!--
@@ -47,9 +50,6 @@
             android:exported="false" />
         <activity
             android:name=".PatientmainActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ambureg"
             android:exported="false" />
         <activity
             android:name=".paireg"
