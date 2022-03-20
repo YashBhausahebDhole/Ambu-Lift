@@ -1,18 +1,25 @@
 package com.example.ambu_lift;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -24,8 +31,10 @@ public class EmergencyBook extends AppCompatActivity {
     Button confirmpai;
     EditText empainame,empaino,situ;
     ProgressBar empb;
-      FirebaseDatabase db=FirebaseDatabase.getInstance();
-    private DatabaseReference root=db.getReference().child("Emergency");
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +48,7 @@ public class EmergencyBook extends AppCompatActivity {
             confirmpai=findViewById(R.id.conbtn);
             empb=findViewById(R.id.empbr);
 
+
             String Latitude=getIntent().getStringExtra("Lati");
             String Longitude=getIntent().getStringExtra("Longi");
 
@@ -47,48 +57,49 @@ public class EmergencyBook extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                String name=empainame.getText().toString().trim();
-                String mbno=empaino.getText().toString().trim();
-                String situation=situ.getText().toString().trim();
+                String PatientName=empainame.getText().toString().trim();
+                String MobileNo=empaino.getText().toString().trim();
+                String Situation=situ.getText().toString().trim();
 
 
-                if(name.isEmpty()){
+                if(PatientName.isEmpty()){
                     empainame.setError("Please Enter Patient Name");
                     empainame.requestFocus();
                 }
-                if(mbno.isEmpty() ){
-                    empaino.setError("Please Enter Mobile No");
+                else if(MobileNo.isEmpty() || MobileNo.length()>10 || MobileNo.length()<10  ){
+                    empaino.setError("Please Enter Valid Mobile No");
                     empaino.requestFocus();
                 }
-                if(mbno.length()>10 ){
-                    empaino.setError("Mobile No should not more than 10 digit");
-                    empaino.requestFocus();
-                }
-                if(situation.isEmpty()){
+
+                else if(Situation.isEmpty()){
                     situ.setError("Please Enter Patient Name");
                     situ.requestFocus();
                 }
+                else {
+                    empb.setVisibility(View.VISIBLE);
+                    EmergencyPatient emergency = new EmergencyPatient(PatientName, MobileNo, Situation, Latitude, Longitude);
 
-                empb.setVisibility(View.VISIBLE);
-
-                HashMap<String ,String> userMap =new HashMap<>();
-                userMap.put("Name",name);
-                userMap.put("Mobile",mbno);
-                userMap.put("Situation",situation);
-                userMap.put("Latitude",Latitude);
-                userMap.put("Longitude",Longitude);
-                root.push().setValue(userMap);
-
-                empb.setVisibility(View.GONE);
-
+                    FirebaseDatabase.getInstance().getReference("Emergency").child(PatientName)
+                            .setValue(emergency).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            if (task.isSuccessful()) {
+                                Toast.makeText(EmergencyBook.this, "You will be Picked up soon", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(EmergencyBook.this, "Driver Details send by Text", Toast.LENGTH_SHORT).show();
+                                empb.setVisibility(View.GONE);
+                                Intent intent =new Intent(EmergencyBook.this,MainActivity.class);
+                                startActivity(intent);
+                            } else {
+                                Toast.makeText(EmergencyBook.this, "Fail to Book Ambulance ", Toast.LENGTH_SHORT).show();
+                                empb.setVisibility(View.GONE);
+                            }
+                        }
+                    });
+                }
             }
         });
-
         ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(EmergencyBook.this, android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.names));
         myAdapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
         ambuspin.setAdapter(myAdapter);
-
-
-
     }
 }

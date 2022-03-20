@@ -139,7 +139,7 @@ public class ambulance_registration extends AppCompatActivity {
                                 if (task.isSuccessful()) {
                                     Driver driver = new Driver(name, mbno, mail, cpass, ems, owner, licence, RC, cwhom);
 
-                                    FirebaseDatabase.getInstance().getReference("Driver")
+                                    FirebaseDatabase.getInstance().getReference("Driver").child(name)
                                             .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                             .setValue(driver).addOnCompleteListener(new OnCompleteListener<Void>() {
                                         @Override

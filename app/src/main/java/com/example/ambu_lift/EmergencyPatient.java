@@ -1,22 +1,24 @@
 package com.example.ambu_lift;
 
 public class EmergencyPatient {
-    public String name;
-    public String mbno;
-    public String situation;
-    public String latitude;
-    public String longitude;
+    public String PatientName;
+    public String MobileNo;
+    public String Situation;
+    public String Latitude;
+    public String Longitude;
+
 
     public EmergencyPatient() {
 
     }
 
-    public EmergencyPatient(String name, String mbno, String situation, String latitude, String longitude) {
-        this.name = name;
-        this.mbno = mbno;
-        this.situation = situation;
-        this.latitude = latitude;
-        this.longitude = longitude;
-    }
+    public EmergencyPatient(String PatientName, String MobileNo, String Situation, String Latitude, String Longitude) {
+        this.PatientName = PatientName;
+        this.MobileNo = MobileNo;
+        this.Situation = Situation;
+        this.Latitude = Latitude;
+        this.Longitude = Longitude;
 
+
+}
 }
