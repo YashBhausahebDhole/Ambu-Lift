@@ -1,29 +1,4 @@
 <resources>
     <string name="app_name">AmbuLift</string>
-
-    <string-array name="names">
-        <item>Type Of Ambulance</item>
-        <item>Cardiac Ambulance</item>
-        <item>General Ambulance</item>
-        <item>Oxygen Ambulance</item>
-        <item>Accident Ambulance</item>
-        <item>AC Ambulance</item>
-        <item>Mortuary Ambulance</item>
-        <item>Neonatal Ambulance</item>
-
-
-    </string-array>
-
-    <string-array name="name">
-        <item>Type Of Ambulance</item>
-        <item>Cardiac Ambulance</item>
-        <item>General Ambulance</item>
-        <item>Oxygen Ambulance</item>
-        <item>Accident Ambulance</item>
-        <item>AC Ambulance</item>
-        <item>Mortuary Ambulance</item>
-        <item>Neonatal Ambulance</item>
-    </string-array>
-
     <string name="title_activity_maps">MapsActivity</string>
 </resources>

@@ -27,7 +27,7 @@
 
         <TextView
             android:id="@+id/signin"
-            android:layout_width="361dp"
+            android:layout_width="352dp"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_marginStart="50dp"

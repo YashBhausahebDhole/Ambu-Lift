@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/Emergen"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -17,7 +18,7 @@
 
         <androidx.coordinatorlayout.widget.CoordinatorLayout
             android:id="@+id/ddm"
-            tools:context=".EmergencyBook"
+            tools:context=".PatientmainActivity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/date"
@@ -45,6 +46,7 @@
         </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
         <TextView
+
             android:id="@+id/DRegi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -63,6 +65,7 @@
 
 
         <EditText
+            
             android:id="@+id/dname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

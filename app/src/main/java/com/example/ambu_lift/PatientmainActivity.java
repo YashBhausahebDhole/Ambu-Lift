@@ -8,7 +8,6 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.Calendar;
 
 public class PatientmainActivity extends AppCompatActivity {
+
     public EditText mdate;
     DatePickerDialog.OnDateSetListener setListener ;
     String[] items =  {"Cardiac Ambulance","General Ambulance","General Ambulance","Oxygen Ambulance"
@@ -41,14 +41,9 @@ public class PatientmainActivity extends AppCompatActivity {
         autoCompleteTxt.setAdapter(adapterItems);
 
 
-        autoCompleteTxt.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String AmbulanceType = parent.getItemAtPosition(position).toString();
-                Toast.makeText(getApplicationContext(),"Selected Ambulance: "+AmbulanceType,Toast.LENGTH_SHORT).show();
-
 
         mdate.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
                 DatePickerDialog datePickerDialog=new DatePickerDialog(
@@ -61,10 +56,15 @@ public class PatientmainActivity extends AppCompatActivity {
                     }
                 },year,month,day);
                 datePickerDialog.show();
+                autoCompleteTxt.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        String AmbulanceType = parent.getItemAtPosition(position).toString();
+                        Toast.makeText(getApplicationContext(),"Selected Ambulance: "+AmbulanceType,Toast.LENGTH_SHORT).show();
             }
         });
-            }
-        });
+        }
+    });
 
     }
 }
