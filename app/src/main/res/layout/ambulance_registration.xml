@@ -14,21 +14,34 @@
         >
 
 
-        <Spinner
-            android:id="@+id/tyofambu"
-            android:layout_width="400dp"
-            android:layout_height="65dp"
-            android:layout_below="@+id/DRegi"
-            android:layout_centerHorizontal="true"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginEnd="20dp"
-            android:background="#30FFFFFF"
-            android:backgroundTint="@color/design_default_color_secondary"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            tools:ignore="SpeakableTextPresentCheck" />
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/ddm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/DRegi"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="-3dp"
+            android:layout_marginEnd="0dp"
+            tools:context=".EmergencyBook">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:hint="Select Ambulance">
+
+                <AutoCompleteTextView
+                    android:id="@+id/auto_complete_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:textColorHint="#0B0303" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
         <EditText
             android:id="@+id/dems"
@@ -93,9 +106,9 @@
             android:id="@+id/dname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/tyofambu"
+            android:layout_below="@id/ddm"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="0dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
             android:background="#30ffffff"
@@ -160,7 +173,7 @@
             android:drawableLeft="@drawable/ic_baseline_info_24"
             android:drawablePadding="20dp"
             android:hint="Password"
-            android:inputType="text"
+            android:inputType="textPassword"
             android:padding="20dp"
             android:shadowColor="#4C1B1B"
             android:textColor="@color/black"
@@ -179,7 +192,7 @@
             android:drawableLeft="@drawable/ic_baseline_info_24"
             android:drawablePadding="20dp"
             android:hint="Confirm Password"
-            android:inputType="text"
+            android:inputType="text|textPassword"
             android:padding="20dp"
             android:shadowColor="#4C1B1B"
             android:textColor="@color/black"

@@ -7,7 +7,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
@@ -30,6 +32,11 @@ public class ambulance_registration extends AppCompatActivity {
     ProgressBar dpb;
     Spinner tyofambu;
     private FirebaseAuth mAuth;
+    String[] items =  {"Cardiac Ambulance","General Ambulance","General Ambulance","Oxygen Ambulance"
+            ,"Accident Ambulance","AC Ambulance","Mortuary Ambulance","Neonatal Ambulance"};
+    AutoCompleteTextView autoCompleteTxt;
+    ArrayAdapter<String> adapterItems;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,15 +53,20 @@ public class ambulance_registration extends AppCompatActivity {
         drc=findViewById(R.id.drc);
         down=findViewById(R.id.down);
         dpb=findViewById(R.id.dpb);
-        tyofambu = findViewById(R.id.tyofambu);
+        autoCompleteTxt = findViewById(R.id.auto_complete_txt);
 
-        //spinner
-        ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(ambulance_registration.this,
-                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.names));
-        myAdapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
-        tyofambu.setAdapter(myAdapter);
+        adapterItems = new ArrayAdapter<String>(this,R.layout.list_item,items);
+        autoCompleteTxt.setAdapter(adapterItems);
 
-        //button
+
+        autoCompleteTxt.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String AmbulanceType = parent.getItemAtPosition(position).toString();
+                Toast.makeText(getApplicationContext(),"Selected Ambulance: "+AmbulanceType,Toast.LENGTH_SHORT).show();
+
+
+                //button
         dreg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -137,7 +149,7 @@ public class ambulance_registration extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
 
                                 if (task.isSuccessful()) {
-                                    Driver driver = new Driver(name, mbno, mail, cpass, ems, owner, licence, RC, cwhom);
+                                    Driver driver = new Driver(name, mbno, mail, cpass, ems, owner, licence, RC, cwhom,AmbulanceType);
 
                                     FirebaseDatabase.getInstance().getReference("Driver").child(name)
                                             .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
@@ -164,6 +176,8 @@ public class ambulance_registration extends AppCompatActivity {
                             }
 
                         });
+            }
+        });
             }
         });
     }}

@@ -10,12 +10,14 @@ public class Driver {
     public String owner;
     public String RC;
     public String cwhom;
+    public String AmbulanceType;
 
     public Driver(){
 
     }
 
-    public Driver(String name, String mbno, String mail, String cpass, String ems, String owner, String licence, String RC,String cwhom) {
+    public Driver(String name, String mbno, String mail, String cpass, String ems,
+                  String owner, String licence, String RC,String cwhom,String AmbulanceType ){
         this.name=name;
         this.mbno=mbno;
         this.mail=mail;
@@ -25,5 +27,6 @@ public class Driver {
         this.licence=licence;
         this.RC=RC;
         this.cwhom=cwhom;
+        this.AmbulanceType=AmbulanceType;
     }
 }

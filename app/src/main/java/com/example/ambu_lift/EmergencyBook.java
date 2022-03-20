@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
@@ -31,6 +32,10 @@ public class EmergencyBook extends AppCompatActivity {
     Button confirmpai;
     EditText empainame,empaino,situ;
     ProgressBar empb;
+    String[] items =  {"Cardiac Ambulance","General Ambulance","General Ambulance","Oxygen Ambulance"
+            ,"Accident Ambulance","AC Ambulance","Mortuary Ambulance","Neonatal Ambulance"};
+    AutoCompleteTextView autoCompleteTxt;
+    ArrayAdapter<String> adapterItems;
 
 
 
@@ -43,16 +48,28 @@ public class EmergencyBook extends AppCompatActivity {
             empainame=findViewById(R.id.empaname);
             empaino=findViewById(R.id.empano);
             situ=findViewById(R.id.situa);
-            ambuspin = findViewById(R.id.ambuspine);
+
 
             confirmpai=findViewById(R.id.conbtn);
             empb=findViewById(R.id.empbr);
+
+        autoCompleteTxt = findViewById(R.id.auto_complete_txt);
+
+        adapterItems = new ArrayAdapter<String>(this,R.layout.list_item,items);
+        autoCompleteTxt.setAdapter(adapterItems);
 
 
             String Latitude=getIntent().getStringExtra("Lati");
             String Longitude=getIntent().getStringExtra("Longi");
 
-        confirmpai.setOnClickListener(new View.OnClickListener() {
+        autoCompleteTxt.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String AmbulanceType = parent.getItemAtPosition(position).toString();
+                Toast.makeText(getApplicationContext(),"Selected Ambulance: "+AmbulanceType,Toast.LENGTH_SHORT).show();
+
+
+                confirmpai.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
@@ -77,7 +94,7 @@ public class EmergencyBook extends AppCompatActivity {
                 }
                 else {
                     empb.setVisibility(View.VISIBLE);
-                    EmergencyPatient emergency = new EmergencyPatient(PatientName, MobileNo, Situation, Latitude, Longitude);
+                    EmergencyPatient emergency = new EmergencyPatient(PatientName, MobileNo, Situation, Latitude, Longitude,AmbulanceType);
 
                     FirebaseDatabase.getInstance().getReference("Emergency").child(PatientName)
                             .setValue(emergency).addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -98,8 +115,7 @@ public class EmergencyBook extends AppCompatActivity {
                 }
             }
         });
-        ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(EmergencyBook.this, android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.names));
-        myAdapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
-        ambuspin.setAdapter(myAdapter);
+            }
+        });
     }
 }
