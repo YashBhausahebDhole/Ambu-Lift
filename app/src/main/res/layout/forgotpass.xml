@@ -13,8 +13,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="80dp"
-        android:backgroundTint="@color/design_default_color_secondary"
+        android:backgroundTint="#E12B3C"
 
+        android:fontFamily="sans-serif-smallcaps"
         android:text="Confirm"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

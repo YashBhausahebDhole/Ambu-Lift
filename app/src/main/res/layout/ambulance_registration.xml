@@ -163,7 +163,7 @@
 
         <EditText
             android:id="@+id/dpass"
-            android:layout_width="match_parent"
+            android:layout_width="391dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/dmail"
             android:layout_marginStart="10dp"
@@ -182,7 +182,7 @@
 
         <EditText
             android:id="@+id/dcpass"
-            android:layout_width="match_parent"
+            android:layout_width="391dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/dpass"
             android:layout_marginStart="10dp"
@@ -201,8 +201,8 @@
 
         <EditText
             android:id="@+id/drc"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="392dp"
+            android:layout_height="76dp"
             android:layout_below="@+id/dlic"
             android:layout_marginStart="10dp"
             android:layout_marginTop="0dp"
@@ -220,7 +220,7 @@
 
         <EditText
             android:id="@+id/down"
-            android:layout_width="match_parent"
+            android:layout_width="391dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/drc"
             android:layout_marginStart="8dp"
@@ -239,8 +239,8 @@
 
         <RadioGroup
             android:id="@+id/awhom"
-            android:layout_width="136dp"
-            android:layout_height="109dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/down"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
@@ -271,10 +271,11 @@
             android:layout_below="@id/down"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="33dp"
-            android:layout_marginTop="201dp"
+            android:layout_marginTop="167dp"
 
-            android:layout_marginEnd="173dp"
-            android:backgroundTint="@color/design_default_color_secondary"
+            android:layout_marginEnd="166dp"
+            android:backgroundTint="#E12B3C"
+            android:fontFamily="sans-serif-smallcaps"
             android:text="REGISTER"
             android:textColor="#210E0E" />
 
