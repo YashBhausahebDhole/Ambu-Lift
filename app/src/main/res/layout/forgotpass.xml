@@ -41,7 +41,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
-        android:background="#30ffffff"
+        android:background="#31090000"
         android:drawableLeft="@drawable/email"
         android:drawablePadding="20dp"
         android:hint="Email ID"

@@ -65,7 +65,7 @@
 
 
         <EditText
-            
+
             android:id="@+id/dname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -74,7 +74,7 @@
             android:layout_marginTop="3dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
-            android:background="#30ffffff"
+            android:background="#31090000"
             android:drawableLeft="@drawable/id"
             android:drawablePadding="20dp"
             android:hint="Patient Name"
@@ -93,7 +93,7 @@
             android:layout_marginTop="0dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
-            android:background="#30ffffff"
+            android:background="#31090000"
             android:drawableLeft="@drawable/location"
             android:drawablePadding="20dp"
             android:hint="Pick Up from"
@@ -111,7 +111,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="10dp"
-            android:background="#30ffffff"
+            android:background="#31090000"
             android:drawableLeft="@drawable/ic_baseline_info_24"
             android:drawablePadding="20dp"
             android:hint="Nearest Hospital"
@@ -142,7 +142,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="10dp"
-            android:background="#30ffffff"
+            android:background="#31090000"
             android:drawableLeft="@drawable/age"
             android:drawablePadding="20dp"
             android:hint="Select Pickup Date"
