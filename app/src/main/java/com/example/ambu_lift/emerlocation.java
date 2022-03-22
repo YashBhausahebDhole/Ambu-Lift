@@ -31,7 +31,7 @@ public class emerlocation extends AppCompatActivity {
     /* access modifiers changed from: protected */
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.emerlocation);
+        setContentView(R.layout.emergency_location);
         conloc=findViewById(R.id.callambu);
 
 

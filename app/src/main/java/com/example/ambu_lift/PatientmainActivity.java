@@ -26,10 +26,11 @@ public class PatientmainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.patientmain);
+        setContentView(R.layout.patient_main);
 
 
         mdate=findViewById(R.id.date);
+
         Calendar calendar=Calendar.getInstance();
         final  int year=calendar.get(Calendar.YEAR);
         final  int month=calendar.get(Calendar.MONTH);

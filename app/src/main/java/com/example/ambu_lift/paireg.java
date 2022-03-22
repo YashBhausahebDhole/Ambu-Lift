@@ -35,7 +35,7 @@ public class paireg extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.patient_registration);
        mAuth = FirebaseAuth.getInstance();
         ptname=findViewById(R.id.dname);
         ptmbno=findViewById(R.id.empaino);

@@ -25,7 +25,7 @@ public class forgotpass extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.forgotpass);
+        setContentView(R.layout.forgotpass_patient);
 
         rmail=findViewById(R.id.rmail);
         confirm=findViewById(R.id.confirm);
