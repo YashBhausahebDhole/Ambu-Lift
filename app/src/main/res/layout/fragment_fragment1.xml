@@ -37,54 +37,28 @@
         android:layout_alignParentBottom="true"
 
         android:layout_marginStart="77dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="424dp"
         android:layout_marginEnd="78dp"
         android:backgroundTint="#33DBC2"
         android:text="BOOK"
         android:textColor="#221D1D"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/DRegi"
         app:rippleColor="#D00D0D" />
 
-    <TextView
-        android:id="@+id/Regi"
-        android:layout_width="173dp"
-        android:layout_height="46dp"
-        android:layout_below="@+id/callambu"
-        android:layout_marginStart="120dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="119dp"
-        android:fontFamily="sans-serif-smallcaps"
-
-        android:gravity="center"
-        android:text="or"
-        android:textColor="@color/black"
-        android:textColorHint="#0E0707"
-        android:textSize="20sp"
-        android:textStyle="bold"
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="485dp"
+        android:layout_height="702dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Book" />
-
-    <Button
-        android:id="@+id/callambu"
-        android:layout_width="256dp"
-        android:layout_height="63dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-
-        android:layout_marginStart="77dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="78dp"
-        android:backgroundTint="#33DBC2"
-        android:text="Call"
-        android:textColor="#221D1D"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Regi"
-        app:rippleColor="#D00D0D" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ambu" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
