@@ -20,7 +20,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Ambu_Lift">
         <activity
-            android:name=".Splash"
+            android:name=".forgotpass_ambu"
             android:exported="false" />
         <activity
             android:name=".EmergencyBook"

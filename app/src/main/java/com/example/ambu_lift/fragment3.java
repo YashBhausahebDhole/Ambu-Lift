@@ -14,8 +14,9 @@ import androidx.fragment.app.Fragment;
 public class fragment3 extends Fragment implements View.OnClickListener {
 
 
-     TextView amreg;
+     TextView amreg,forgotpass;
      Button button;
+
 
 
     @Override
@@ -27,6 +28,14 @@ public class fragment3 extends Fragment implements View.OnClickListener {
         amreg = v.findViewById(R.id.ambureg);
         button = v.findViewById(R.id.logbtn);
         amreg.setOnClickListener(this);
+        forgotpass=v.findViewById(R.id.forgotpass);
+        forgotpass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), forgotpass.class);
+                startActivity(intent);
+            }
+        });
 
         return v;
     }
