@@ -73,7 +73,7 @@
 
 
         <EditText
-            android:id="@+id/dname"
+            android:id="@+id/dnam"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/DRegi"
@@ -94,7 +94,7 @@
             android:id="@+id/empaino"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/dname"
+            android:layout_below="@+id/dnam"
             android:layout_marginStart="10dp"
             android:layout_marginTop="0dp"
             android:layout_marginEnd="10dp"
@@ -178,7 +178,7 @@
         ]]>
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/confirmpai"
+            android:id="@+id/conambu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/dlic"

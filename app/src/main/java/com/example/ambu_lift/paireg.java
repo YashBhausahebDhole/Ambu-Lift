@@ -37,7 +37,7 @@ public class paireg extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.patient_registration);
        mAuth = FirebaseAuth.getInstance();
-        ptname=findViewById(R.id.dname);
+        ptname=findViewById(R.id.dnam);
         ptmbno=findViewById(R.id.empaino);
         ptmail=findViewById(R.id.dmail);
         ptpass=findViewById(R.id.dpass);
@@ -45,7 +45,7 @@ public class paireg extends AppCompatActivity {
         ptaddress=findViewById(R.id.dems);
         ptage=findViewById(R.id.dlic);
         ptgender=findViewById(R.id.ptgender);
-        register=findViewById(R.id.confirmpai);
+        register=findViewById(R.id.conambu);
         progressBar=findViewById(R.id.progressBar2);
 
 

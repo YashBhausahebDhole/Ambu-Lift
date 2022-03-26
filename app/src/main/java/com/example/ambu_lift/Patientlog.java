@@ -6,21 +6,27 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
-public class DriverPortal extends AppCompatActivity {
-    Button  activepatient;
+public class Patientlog extends AppCompatActivity {
+
+    Button hire;
+
+    TextView cpname;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.driver_main);
-        activepatient=findViewById(R.id.activepatient);
+        setContentView(R.layout.patientlog);
 
-        activepatient.setOnClickListener(new View.OnClickListener() {
+        cpname=findViewById(R.id.cpname);
+        hire=findViewById(R.id.hire);
+
+        hire.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(DriverPortal.this,Patientlog.class);
+                cpname.append("Atharva Mundhe");
+
             }
         });
-
     }
 }

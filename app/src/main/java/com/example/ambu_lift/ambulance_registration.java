@@ -41,7 +41,7 @@ public class ambulance_registration extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ambulance_registration); mAuth = FirebaseAuth.getInstance();
-        dname=findViewById(R.id.dname);
+        dname=findViewById(R.id.dnam);
         dno=findViewById(R.id.empaino);
         dmail=findViewById(R.id.dmail);
         dpass=findViewById(R.id.dpass);
@@ -49,7 +49,7 @@ public class ambulance_registration extends AppCompatActivity {
         dems=findViewById(R.id.dems);
         dlic=findViewById(R.id.dlic);
         awhom=findViewById(R.id.awhom);
-        dreg=findViewById(R.id.confirmpai);
+        dreg=findViewById(R.id.conambu);
         drc=findViewById(R.id.drc);
         down=findViewById(R.id.down);
         dpb=findViewById(R.id.dpb);

@@ -11,7 +11,7 @@
     tools:context=".MainActivity">
 
         <TextView
-            android:id="@+id/paireg3"
+            android:id="@+id/sw3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/ambureg"
@@ -26,7 +26,7 @@
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/signin"
+            android:id="@+id/signinpai"
             android:layout_width="352dp"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -43,10 +43,10 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/amail"
+            android:id="@+id/ambumail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/signin"
+            android:layout_below="@id/signinpai"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
@@ -60,10 +60,10 @@
             android:textColorHint="#1B1010" />
 
         <EditText
-            android:id="@+id/apass"
+            android:id="@+id/ambupass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/amail"
+            android:layout_below="@id/ambumail"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
@@ -78,10 +78,10 @@
             android:textColorHint="#1B1010" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/confirmpai"
+            android:id="@+id/conambu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/apass"
+            android:layout_below="@id/ambupass"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
@@ -92,15 +92,14 @@
             android:textColor="#1C0707" />
 
         <TextView
-            android:id="@+id/forgotpass"
+            android:id="@+id/forgotpassp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/confirmpai"
+            android:layout_below="@id/conambu"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
             android:text="Forgot password?"
             android:textColor="#070404"
             android:textColorHint="#1B1010"
@@ -111,7 +110,7 @@
             android:id="@+id/ambureg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/forgotpass"
+            android:layout_below="@id/forgotpassp"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
@@ -139,6 +138,19 @@
                 android:src="@drawable/google" />
 
         </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/pbar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="113dp"
+            android:layout_height="104dp"
+            android:layout_alignBottom="@+id/conambu"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="158dp"
+            android:layout_marginTop="244dp"
+            android:layout_marginBottom="40dp"
+            android:visibility="gone" />
     </RelativeLayout>
 
 </ScrollView>

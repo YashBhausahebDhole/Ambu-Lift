@@ -67,12 +67,12 @@
 
         <EditText
 
-            android:id="@+id/dname"
+            android:id="@+id/dnam"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/DRegi"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="3dp"
+            android:layout_marginTop="30dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
             android:background="#31090000"
@@ -89,7 +89,7 @@
             android:id="@+id/dmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/dname"
+            android:layout_below="@id/dnam"
             android:layout_marginStart="10dp"
             android:layout_marginTop="0dp"
             android:layout_marginEnd="10dp"
@@ -106,8 +106,8 @@
 
         <EditText
             android:id="@+id/dpass"
-            android:layout_width="390dp"
-            android:layout_height="77dp"
+            android:layout_width="388dp"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/dmail"
             android:layout_marginStart="10dp"
             android:layout_marginTop="0dp"
@@ -123,7 +123,7 @@
             android:textColorHint="#000000" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/confirmpai"
+            android:id="@+id/conambu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/ddm"

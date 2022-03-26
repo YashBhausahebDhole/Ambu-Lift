@@ -15,7 +15,7 @@
 
 
         <ProgressBar
-            android:id="@+id/progressBar3"
+            android:id="@+id/pbarp"
             style="?android:attr/progressBarStyle"
             android:layout_width="137dp"
             android:layout_height="141dp"
@@ -45,7 +45,7 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/paireg2"
+            android:id="@+id/sw"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/paireg"
@@ -63,7 +63,7 @@
             android:id="@+id/logbtn"
             android:layout_width="191dp"
             android:layout_height="48dp"
-            android:layout_below="@+id/apass"
+            android:layout_below="@+id/patpass"
             android:layout_alignParentStart="true"
             android:layout_marginStart="109dp"
             android:layout_marginTop="56dp"
@@ -72,7 +72,7 @@
             app:backgroundTint="#1ECADF" />
 
         <TextView
-            android:id="@+id/signin"
+            android:id="@+id/signinpai"
             android:layout_width="361dp"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -89,10 +89,10 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/amail"
+            android:id="@+id/patmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/signin"
+            android:layout_below="@id/signinpai"
             android:layout_marginStart="10dp"
             android:layout_marginTop="08dp"
             android:layout_marginEnd="10dp"
@@ -106,10 +106,10 @@
             android:textColorHint="#0D0606" />
 
         <EditText
-            android:id="@+id/apass"
+            android:id="@+id/patpass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/amail"
+            android:layout_below="@id/patmail"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
@@ -125,7 +125,7 @@
 
 
         <TextView
-            android:id="@+id/forgotpass"
+            android:id="@+id/forgotpassp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/logbtn"
@@ -143,10 +143,10 @@
             android:id="@+id/paireg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/forgotpass"
+            android:layout_below="@id/forgotpassp"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="19dp"
+            android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="20dp"
             android:text="Register ?"

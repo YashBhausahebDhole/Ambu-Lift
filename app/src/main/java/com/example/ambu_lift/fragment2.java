@@ -24,10 +24,10 @@ import com.google.firebase.auth.FirebaseAuth;
 public class fragment2 extends Fragment {
 
 
-     TextView register,forgotpass;
+     TextView paireg,forgotpassp;
      Button logbtn;
-     EditText email,pass;
-     ProgressBar progressBar;
+     EditText patmail,patpass;
+     ProgressBar pbarp;
      FirebaseAuth mAuth;
 
 
@@ -37,16 +37,16 @@ public class fragment2 extends Fragment {
         // Inflate the layout for this fragment
 
         View v = inflater.inflate(R.layout.fragment_fragment2, container, false);
-        register = v.findViewById(R.id.paireg);
+        paireg = v.findViewById(R.id.paireg);
         logbtn = v.findViewById(R.id.logbtn);
-        forgotpass=v.findViewById(R.id.forgotpass);
-        email=v.findViewById(R.id.amail);
-        pass=v.findViewById(R.id.apass);
-        progressBar=v.findViewById(R.id.progressBar3);
+        forgotpassp=v.findViewById(R.id.forgotpassp);
+        patmail=v.findViewById(R.id.patmail);
+        patpass=v.findViewById(R.id.patpass);
+        pbarp=v.findViewById(R.id.pbarp);
         mAuth=FirebaseAuth.getInstance();
 
 
-        forgotpass.setOnClickListener(new View.OnClickListener() {
+        forgotpassp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), forgotpass.class);
@@ -60,30 +60,30 @@ public class fragment2 extends Fragment {
             @Override
             public void onClick(View view) {
 
-                String Email= email.getText().toString().trim();
-                String Pass=pass.getText().toString().trim();
+                String Email= patmail.getText().toString().trim();
+                String Pass=patpass.getText().toString().trim();
 
                 if(!Patterns.EMAIL_ADDRESS.matcher(Email).matches()) {
-                    email.setError("Please Enter valid Email");
-                    email.requestFocus();
+                    patmail.setError("Please Enter valid Email");
+                    patmail.requestFocus();
                 }
                 if(Pass.length()<8){
-                    pass.setError("Please Enter Password of Atleast of 8 Characters");
-                    pass.requestFocus();
+                    patpass.setError("Please Enter Password of Atleast of 8 Characters");
+                    patpass.requestFocus();
                 }
-                progressBar.setVisibility(View.VISIBLE);
+                pbarp.setVisibility(View.VISIBLE);
 
                 mAuth.signInWithEmailAndPassword(Email,Pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
-                            progressBar.setVisibility(View.GONE);
+                            pbarp.setVisibility(View.GONE);
                             Toast.makeText(getActivity(), "Login Successful", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(getActivity(), PatientmainActivity.class);
                             startActivity(intent);
                         }
                         else{
-                            progressBar.setVisibility(View.GONE);
+                            pbarp.setVisibility(View.GONE);
                             Toast.makeText(getActivity(), "Login Failed", Toast.LENGTH_SHORT).show();
                         }
                     }
@@ -95,7 +95,7 @@ public class fragment2 extends Fragment {
 
 
 
-        register.setOnClickListener(new View.OnClickListener() {
+        paireg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), paireg.class);

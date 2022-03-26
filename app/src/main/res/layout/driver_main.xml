@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/Emergen"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -16,55 +17,96 @@
 
 
         <TextView
+            android:id="@+id/dname2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="218dp"
+            android:layout_marginTop="34dp"
+            android:text="Notifications"
+            android:textColor="#110101"
+            android:textSize="20sp" />
+
+        <TextView
             android:id="@+id/DRegi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
             android:layout_marginStart="50dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="86dp"
             android:layout_marginEnd="50dp"
             android:layout_marginBottom="25dp"
             android:fontFamily="sans-serif-smallcaps"
             android:gravity="center"
-            android:text="Driver Main Portal"
+            android:text="Ambulance Driver "
             android:textColor="#0E0E0E"
             android:textColorHighlight="#13DCC4"
             android:textColorHint="#000000"
             android:textSize="34sp"
             android:textStyle="bold" />
 
-
-        <TextView
-            android:id="@+id/dname"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/DRegi"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="3dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:background="#31090000"
-            android:drawableLeft="@drawable/id"
-            android:drawablePadding="20dp"
-            android:hint=" Driver Name"
-            android:padding="20dp"
-            android:textColor="#0E0E0E"
-            android:textColorHighlight="#13DCC4"
-            android:textColorHint="#000000"
-            android:textSize="18dp" />
-
-
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/confirmpai"
+            android:id="@+id/conambu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/dname"
+            android:layout_below="@id/activepatient"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="168dp"
+            android:layout_marginTop="56dp"
+            android:layout_marginEnd="155dp"
             android:layout_marginBottom="8dp"
             android:backgroundTint="@color/design_default_color_secondary"
             android:text="BOOK"
             android:textColor="#020202" />
+
+        <Button
+            android:id="@+id/activepatient"
+            android:layout_width="176dp"
+            android:layout_height="68dp"
+            android:layout_below="@id/dname"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="123dp"
+            android:layout_marginTop="102dp"
+            android:backgroundTint="#FB1010"
+            android:text="Active Patients"
+            android:textColor="#040000"
+            app:iconTint="#2DC2C2" />
+
+        <Switch
+            android:id="@+id/active"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dname"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="58dp"
+            android:layout_marginTop="31dp"
+            android:text="Driver Status"
+            android:textColor="#0D0101"
+            android:textOff="NOT ACTIVE"
+            android:textOn="ACTIVE"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/dname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/DRegi"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="54dp"
+            android:layout_marginTop="30dp"
+            android:text="Driver Name Here"
+            android:textColor="#110101"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="64dp"
+            android:layout_height="41dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="26dp"
+            android:layout_marginEnd="11dp"
+            app:srcCompat="@drawable/notify" />
 
 
     </RelativeLayout>
