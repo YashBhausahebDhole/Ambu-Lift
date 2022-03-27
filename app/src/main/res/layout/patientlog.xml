@@ -30,11 +30,11 @@
         android:id="@+id/c1"
         android:layout_width="378dp"
         android:layout_height="325dp"
+        android:layout_below="@+id/DRegi3"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="11dp"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="33dp"
         app:cardBackgroundColor="#D1CBDBD0">
 
         <RelativeLayout
@@ -42,49 +42,52 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/pickup2"
-                android:layout_width="wrap_content"
+                android:id="@+id/dropat"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/pickup"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_marginStart="12dp"
                 android:layout_marginTop="12dp"
-                android:layout_marginEnd="276dp"
-                android:text="Drop At:"
+                android:layout_marginEnd="0dp"
+                android:text="Drop At: "
                 android:textColor="#070101"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/scedule"
-                android:layout_width="wrap_content"
+                android:id="@+id/schedule"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/cpacontact"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_marginStart="12dp"
                 android:layout_marginTop="12dp"
-                android:layout_marginEnd="271dp"
-                android:text="Schedule:"
+                android:layout_marginEnd="0dp"
+                android:text="Schedule: "
                 android:textColor="#070101"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/pickup"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/scedule"
+                android:layout_below="@+id/schedule"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_marginStart="12dp"
                 android:layout_marginTop="12dp"
-                android:layout_marginEnd="242dp"
-                android:text="Pickup From:"
+                android:layout_marginEnd="0dp"
+                android:text="Pickup From: "
                 android:textColor="#070101"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <Button
-                android:id="@+id/callpai"
+                android:id="@+id/viewpai"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -94,49 +97,52 @@
                 android:layout_marginEnd="196dp"
                 android:layout_marginBottom="8dp"
                 android:backgroundTint="#E71313"
-                android:text="Call Patient" />
+                android:text="View Patient" />
 
             <TextView
                 android:id="@+id/cpage"
-                android:layout_width="47dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cpname"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_marginStart="12dp"
                 android:layout_marginTop="12dp"
-                android:layout_marginEnd="319dp"
-                android:text="Age:"
+                android:layout_marginEnd="0dp"
+                android:text="Age: "
                 android:textColor="#060101"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/cpname"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_marginStart="12dp"
                 android:layout_marginTop="12dp"
-                android:layout_marginEnd="214dp"
-                android:text="Patient Name:"
+                android:layout_marginEnd="0dp"
+                android:text="Patient Name: "
                 android:textColor="#070101"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/cpacontact"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cpage"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_marginStart="12dp"
                 android:layout_marginTop="12dp"
-                android:layout_marginEnd="183dp"
-                android:text="Patient Contact No:"
+                android:layout_marginEnd="0dp"
+                android:text="Patient Contact No: "
                 android:textColor="#070101"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/hire"

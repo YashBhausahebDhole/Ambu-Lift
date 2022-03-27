@@ -14,10 +14,10 @@
             android:id="@+id/sw3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/ambureg"
+            android:layout_below="@id/ambureg"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="47dp"
+            android:layout_marginTop="60dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="20dp"
             android:text="Sign in with"
@@ -48,7 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/signinpai"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
             android:background="#31090000"
@@ -92,13 +92,13 @@
             android:textColor="#1C0707" />
 
         <TextView
-            android:id="@+id/forgotpassp"
+            android:id="@+id/logbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/conambu"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="37dp"
             android:layout_marginEnd="20dp"
             android:text="Forgot password?"
             android:textColor="#070404"
@@ -110,10 +110,10 @@
             android:id="@+id/ambureg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/forgotpassp"
+            android:layout_below="@id/logbtn"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="33dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="20dp"
             android:text="Register?"
@@ -121,13 +121,12 @@
             android:textColorHint="#1B1010"
             android:textSize="16sp" />
 
-
         <LinearLayout
             android:id="@+id/socialicons"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/ambureg"
-            android:layout_marginTop="122dp"
+            android:layout_marginTop="91dp"
             android:gravity="center">
 
 

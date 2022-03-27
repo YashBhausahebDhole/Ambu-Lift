@@ -73,7 +73,7 @@
 
 
         <EditText
-            android:id="@+id/dnam"
+            android:id="@+id/npname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/DRegi"
@@ -94,7 +94,7 @@
             android:id="@+id/empaino"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/dnam"
+            android:layout_below="@+id/npname"
             android:layout_marginStart="10dp"
             android:layout_marginTop="0dp"
             android:layout_marginEnd="10dp"
@@ -110,7 +110,7 @@
             android:textColorHint="#0E0707" />
 
         <EditText
-            android:id="@+id/dmail"
+            android:id="@+id/npickup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/empaino"
@@ -132,7 +132,7 @@
             android:id="@+id/dpass"
             android:layout_width="394dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/dmail"
+            android:layout_below="@+id/npickup"
             android:layout_marginStart="10dp"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="10dp"

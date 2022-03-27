@@ -37,9 +37,9 @@ public class paireg extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.patient_registration);
        mAuth = FirebaseAuth.getInstance();
-        ptname=findViewById(R.id.dnam);
+        ptname=findViewById(R.id.npname);
         ptmbno=findViewById(R.id.empaino);
-        ptmail=findViewById(R.id.dmail);
+        ptmail=findViewById(R.id.npickup);
         ptpass=findViewById(R.id.dpass);
         ptcpass=findViewById(R.id.dcpass);
         ptaddress=findViewById(R.id.dems);
@@ -120,7 +120,7 @@ public class paireg extends AppCompatActivity {
                                  Paitient patient = new Paitient(pname, pmbno, pmail, pcpass, paddress, pAge, pgender);
 
                                  FirebaseDatabase.getInstance().getReference("Patients").child(pname)
-                                         .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+//                                         .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                          .setValue(patient).addOnCompleteListener(new OnCompleteListener<Void>() {
                                      @Override
                                      public void onComplete(@NonNull Task<Void> task) {

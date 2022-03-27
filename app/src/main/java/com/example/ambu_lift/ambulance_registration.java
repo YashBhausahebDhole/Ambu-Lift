@@ -41,9 +41,9 @@ public class ambulance_registration extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ambulance_registration); mAuth = FirebaseAuth.getInstance();
-        dname=findViewById(R.id.dnam);
+        dname=findViewById(R.id.npname);
         dno=findViewById(R.id.empaino);
-        dmail=findViewById(R.id.dmail);
+        dmail=findViewById(R.id.npickup);
         dpass=findViewById(R.id.dpass);
         dcpass=findViewById(R.id.dcpass);
         dems=findViewById(R.id.dems);
@@ -152,7 +152,7 @@ public class ambulance_registration extends AppCompatActivity {
                                     Driver driver = new Driver(name, mbno, mail, cpass, ems, owner, licence, RC, cwhom,AmbulanceType);
 
                                     FirebaseDatabase.getInstance().getReference("Driver").child(name)
-                                            .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+//                                            .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                             .setValue(driver).addOnCompleteListener(new OnCompleteListener<Void>() {
                                         @Override
                                         public void onComplete(@NonNull Task<Void> task) {

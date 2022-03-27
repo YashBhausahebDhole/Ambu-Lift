@@ -51,7 +51,7 @@
             android:layout_below="@+id/paireg"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="47dp"
+            android:layout_marginTop="60dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="20dp"
             android:text="Sign in with"
@@ -59,17 +59,19 @@
             android:textColorHint="#0D0606"
             android:textSize="16sp" />
 
-        <Button
-            android:id="@+id/logbtn"
-            android:layout_width="191dp"
-            android:layout_height="48dp"
-            android:layout_below="@+id/patpass"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="109dp"
-            android:layout_marginTop="56dp"
-            android:text="Login"
-            android:textColor="#140A0A"
-            app:backgroundTint="#1ECADF" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/logbtnp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/patpass"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/design_default_color_secondary"
+            android:text="LOGIN"
+            android:textColor="#1C0707" />
 
         <TextView
             android:id="@+id/signinpai"
@@ -94,7 +96,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/signinpai"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="08dp"
+            android:layout_marginTop="12dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
             android:background="#31090000"
@@ -125,10 +127,10 @@
 
 
         <TextView
-            android:id="@+id/forgotpassp"
+            android:id="@+id/logbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/logbtn"
+            android:layout_below="@id/logbtnp"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="20dp"
             android:layout_marginTop="37dp"
@@ -143,7 +145,7 @@
             android:id="@+id/paireg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/forgotpassp"
+            android:layout_below="@id/logbtn"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"

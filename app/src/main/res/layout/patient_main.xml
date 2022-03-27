@@ -4,8 +4,7 @@
     android:id="@+id/Emergen"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:fillViewport="true"
-    android:scrollbars="none">
+    android:fillViewport="true">
 
 
     <RelativeLayout
@@ -67,7 +66,7 @@
 
         <EditText
 
-            android:id="@+id/dnam"
+            android:id="@+id/npname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/DRegi"
@@ -86,10 +85,10 @@
 
 
         <EditText
-            android:id="@+id/dmail"
+            android:id="@+id/npickup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/dnam"
+            android:layout_below="@id/npname"
             android:layout_marginStart="10dp"
             android:layout_marginTop="0dp"
             android:layout_marginEnd="10dp"
@@ -108,14 +107,14 @@
             android:id="@+id/dpass"
             android:layout_width="388dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/dmail"
+            android:layout_below="@+id/npickup"
             android:layout_marginStart="10dp"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="10dp"
             android:background="#31090000"
-            android:drawableLeft="@drawable/ic_baseline_info_24"
+            android:drawableLeft="@drawable/location"
             android:drawablePadding="20dp"
-            android:hint="Nearest Hospital"
+            android:hint="Drop At"
             android:inputType="text"
             android:padding="20dp"
             android:textColor="#0E0E0E"

@@ -25,7 +25,7 @@ public class fragment2 extends Fragment {
 
 
      TextView paireg,forgotpassp;
-     Button logbtn;
+     Button logbtnp;
      EditText patmail,patpass;
      ProgressBar pbarp;
      FirebaseAuth mAuth;
@@ -38,8 +38,8 @@ public class fragment2 extends Fragment {
 
         View v = inflater.inflate(R.layout.fragment_fragment2, container, false);
         paireg = v.findViewById(R.id.paireg);
-        logbtn = v.findViewById(R.id.logbtn);
-        forgotpassp=v.findViewById(R.id.forgotpassp);
+        logbtnp = v.findViewById(R.id.logbtnp);
+        forgotpassp=v.findViewById(R.id.logbtnp);
         patmail=v.findViewById(R.id.patmail);
         patpass=v.findViewById(R.id.patpass);
         pbarp=v.findViewById(R.id.pbarp);
@@ -56,7 +56,7 @@ public class fragment2 extends Fragment {
 
 
 
-        logbtn.setOnClickListener(new View.OnClickListener() {
+        logbtnp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -71,24 +71,25 @@ public class fragment2 extends Fragment {
                     patpass.setError("Please Enter Password of Atleast of 8 Characters");
                     patpass.requestFocus();
                 }
-                pbarp.setVisibility(View.VISIBLE);
+                else {
+                    pbarp.setVisibility(View.VISIBLE);
 
-                mAuth.signInWithEmailAndPassword(Email,Pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful()){
-                            pbarp.setVisibility(View.GONE);
-                            Toast.makeText(getActivity(), "Login Successful", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(getActivity(), PatientmainActivity.class);
-                            startActivity(intent);
-                        }
-                        else{
-                            pbarp.setVisibility(View.GONE);
-                            Toast.makeText(getActivity(), "Login Failed", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });
 
+                    mAuth.signInWithEmailAndPassword(Email, Pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()) {
+                                pbarp.setVisibility(View.GONE);
+                                Toast.makeText(getActivity(), "Login Successful", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(getActivity(), PatientmainActivity.class);
+                                startActivity(intent);
+                            } else {
+                                pbarp.setVisibility(View.GONE);
+                                Toast.makeText(getActivity(), "Login Failed", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
+                }
             }
 
         });

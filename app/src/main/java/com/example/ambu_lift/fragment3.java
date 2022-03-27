@@ -43,7 +43,7 @@ public class fragment3 extends Fragment{
         ambumail = v.findViewById(R.id.ambumail);
         pbar=v.findViewById(R.id.pbar);
         mAuth = FirebaseAuth.getInstance();
-        forgotpass = v.findViewById(R.id.forgotpassp);
+        forgotpass = v.findViewById(R.id.logbtn);
 
         conambu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,22 +60,24 @@ public class fragment3 extends Fragment{
                     ambupass.setError("Please Enter Password of Atleast of 8 Characters");
                     ambupass.requestFocus();
                 }
-                pbar.setVisibility(View.VISIBLE);
+                else {
+                    pbar.setVisibility(View.VISIBLE);
 
-                mAuth.signInWithEmailAndPassword(AEmail, APass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            pbar.setVisibility(View.GONE);
-                            Toast.makeText(getActivity(), "Login Successful", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(getActivity(), DriverPortal.class);
-                            startActivity(intent);
-                        } else {
-                            pbar.setVisibility(View.GONE);
-                            Toast.makeText(getActivity(), "Login Failed", Toast.LENGTH_SHORT).show();
+                    mAuth.signInWithEmailAndPassword(AEmail, APass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()) {
+                                pbar.setVisibility(View.GONE);
+                                Toast.makeText(getActivity(), "Login Successful", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(getActivity(), DriverPortal.class);
+                                startActivity(intent);
+                            } else {
+                                pbar.setVisibility(View.GONE);
+                                Toast.makeText(getActivity(), "Login Failed", Toast.LENGTH_SHORT).show();
+                            }
                         }
-                    }
-                });
+                    });
+                }
             }
         });
 
