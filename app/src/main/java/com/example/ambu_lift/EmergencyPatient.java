@@ -9,9 +9,6 @@ public class EmergencyPatient {
     public String AmbulanceType;
 
 
-    public EmergencyPatient() {
-
-    }
 
     public EmergencyPatient(String PatientName, String MobileNo, String Situation, String Latitude, String Longitude,String AmbulanceType) {
         this.PatientName = PatientName;

@@ -34,7 +34,7 @@
                 android:hint="Select Ambulance">
 
                 <AutoCompleteTextView
-                    android:id="@+id/auto_complete_txt"
+                    android:id="@+id/nambu"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="none"
@@ -162,7 +162,7 @@
             android:textColorHint="#0B0505" />
 
         <EditText
-            android:id="@+id/dpass"
+            android:id="@+id/ndrop"
             android:layout_width="391dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/npickup"
@@ -184,7 +184,7 @@
             android:id="@+id/dcpass"
             android:layout_width="391dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/dpass"
+            android:layout_below="@+id/ndrop"
             android:layout_marginStart="10dp"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="10dp"

@@ -50,6 +50,7 @@ public class fragment2 extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), forgotpass.class);
+
                 startActivity(intent);
             }
         });
@@ -82,6 +83,7 @@ public class fragment2 extends Fragment {
                                 pbarp.setVisibility(View.GONE);
                                 Toast.makeText(getActivity(), "Login Successful", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(getActivity(), PatientmainActivity.class);
+                                intent.putExtra("pass", Pass);
                                 startActivity(intent);
                             } else {
                                 pbarp.setVisibility(View.GONE);

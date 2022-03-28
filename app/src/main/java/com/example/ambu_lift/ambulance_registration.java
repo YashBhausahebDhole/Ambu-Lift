@@ -44,7 +44,7 @@ public class ambulance_registration extends AppCompatActivity {
         dname=findViewById(R.id.npname);
         dno=findViewById(R.id.empaino);
         dmail=findViewById(R.id.npickup);
-        dpass=findViewById(R.id.dpass);
+        dpass=findViewById(R.id.ndrop);
         dcpass=findViewById(R.id.dcpass);
         dems=findViewById(R.id.dems);
         dlic=findViewById(R.id.dlic);
@@ -53,7 +53,7 @@ public class ambulance_registration extends AppCompatActivity {
         drc=findViewById(R.id.drc);
         down=findViewById(R.id.down);
         dpb=findViewById(R.id.dpb);
-        autoCompleteTxt = findViewById(R.id.auto_complete_txt);
+        autoCompleteTxt = findViewById(R.id.nambu);
 
         adapterItems = new ArrayAdapter<String>(this,R.layout.list_item,items);
         autoCompleteTxt.setAdapter(adapterItems);

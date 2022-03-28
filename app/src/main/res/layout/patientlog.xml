@@ -42,6 +42,18 @@
             android:layout_height="match_parent">
 
             <TextView
+                android:id="@+id/schedule"
+                android:layout_width="258dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cpacontact"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="9dp"
+                android:textColor="#070101"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
                 android:id="@+id/dropat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -57,15 +69,15 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/schedule"
-                android:layout_width="match_parent"
+                android:id="@+id/l1"
+                android:layout_width="99dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/cpacontact"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_marginStart="12dp"
                 android:layout_marginTop="12dp"
-                android:layout_marginEnd="0dp"
+                android:layout_marginEnd="267dp"
                 android:text="Schedule: "
                 android:textColor="#070101"
                 android:textSize="20sp"
@@ -75,11 +87,11 @@
                 android:id="@+id/pickup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/schedule"
+                android:layout_below="@+id/l1"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_marginStart="12dp"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="30dp"
                 android:layout_marginEnd="0dp"
                 android:text="Pickup From: "
                 android:textColor="#070101"

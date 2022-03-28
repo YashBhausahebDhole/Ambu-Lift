@@ -40,7 +40,7 @@ public class paireg extends AppCompatActivity {
         ptname=findViewById(R.id.npname);
         ptmbno=findViewById(R.id.empaino);
         ptmail=findViewById(R.id.npickup);
-        ptpass=findViewById(R.id.dpass);
+        ptpass=findViewById(R.id.ndrop);
         ptcpass=findViewById(R.id.dcpass);
         ptaddress=findViewById(R.id.dems);
         ptage=findViewById(R.id.dlic);
@@ -119,7 +119,7 @@ public class paireg extends AppCompatActivity {
                              if (task.isSuccessful()) {
                                  Paitient patient = new Paitient(pname, pmbno, pmail, pcpass, paddress, pAge, pgender);
 
-                                 FirebaseDatabase.getInstance().getReference("Patients").child(pname)
+                                 FirebaseDatabase.getInstance().getReference("Patients").child(pcpass)
 //                                         .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                          .setValue(patient).addOnCompleteListener(new OnCompleteListener<Void>() {
                                      @Override

@@ -5,9 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -15,20 +13,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
-import java.util.HashMap;
 
 public class EmergencyBook extends AppCompatActivity {
 
-    Spinner ambuspin;
+
     Button confirmpai;
     EditText empainame,empaino,situ;
     ProgressBar empb;
@@ -53,7 +46,7 @@ public class EmergencyBook extends AppCompatActivity {
             confirmpai=findViewById(R.id.conbtn);
             empb=findViewById(R.id.empbr);
 
-        autoCompleteTxt = findViewById(R.id.auto_complete_txt);
+        autoCompleteTxt = findViewById(R.id.nambu);
 
         adapterItems = new ArrayAdapter<String>(this,R.layout.list_item,items);
         autoCompleteTxt.setAdapter(adapterItems);
