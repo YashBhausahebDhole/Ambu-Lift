@@ -49,6 +49,7 @@ public class PatientmainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.patient_main);
         npname=findViewById(R.id.npname);
         npickup=findViewById(R.id.npickup);
@@ -58,14 +59,16 @@ public class PatientmainActivity extends AppCompatActivity {
        conambu=findViewById(R.id.conambu);
         npb=findViewById(R.id.npb);
         autoCompletetxt = findViewById(R.id.nambu);
-
         String pcpass=getIntent().getStringExtra("pass").toString();
         readData(pcpass);
+
         adapterItems = new ArrayAdapter<String>(this,R.layout.list_item,items);
         autoCompletetxt.setAdapter(adapterItems);
+
         autoCompletetxt.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
                 String AmbulanceType = parent.getItemAtPosition(position).toString();
 
                 conambu.setOnClickListener(new View.OnClickListener() {
@@ -104,7 +107,7 @@ public class PatientmainActivity extends AppCompatActivity {
                             npb.setVisibility(View.VISIBLE);
                             MainPatient mainPatient = new MainPatient(Patient, Pickup, DropAt, Date, Time,AmbulanceType);
 
-                            FirebaseDatabase.getInstance().getReference("Patients").child(Patient)
+                            FirebaseDatabase.getInstance().getReference("Patients").child(pcpass).child("Main")
                                     .setValue(mainPatient).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
@@ -183,13 +186,7 @@ public class PatientmainActivity extends AppCompatActivity {
                     }
                 },year,month,day);
                 datePickerDialog.show();
-                autoCompletetxt.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                        String AmbulanceType = parent.getItemAtPosition(position).toString();
-                        Toast.makeText(getApplicationContext(),"Selected Ambulance: "+AmbulanceType,Toast.LENGTH_SHORT).show();
-            }
-        });
+
         }
     });
 

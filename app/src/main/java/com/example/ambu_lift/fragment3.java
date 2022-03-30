@@ -70,6 +70,7 @@ public class fragment3 extends Fragment{
                                 pbar.setVisibility(View.GONE);
                                 Toast.makeText(getActivity(), "Login Successful", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(getActivity(), DriverPortal.class);
+                                intent.putExtra("apass",APass);
                                 startActivity(intent);
                             } else {
                                 pbar.setVisibility(View.GONE);

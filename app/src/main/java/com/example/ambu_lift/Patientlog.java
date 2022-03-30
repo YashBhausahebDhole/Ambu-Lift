@@ -41,11 +41,11 @@ public class Patientlog extends AppCompatActivity {
             public void onClick(View v) {
 
                 String pcpass = "Atharva123";
-                String pname="Atharva Mundhe";
-                    readData(pcpass,pname);
+
+                    readData(pcpass);
                               }
 
-         private void readData(String pcpass,String pname) {
+         private void readData(String pcpass) {
              reference = FirebaseDatabase.getInstance().getReference("Patients");
              reference.child(pcpass).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
                  @Override
@@ -65,7 +65,7 @@ public class Patientlog extends AppCompatActivity {
 
                  }
              });
-             reference.child(pname).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+             reference.child(pcpass).child("Main").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
                  @Override
                  public void onComplete(@NonNull Task<DataSnapshot> task) {
 

@@ -11,7 +11,7 @@ public class MainPatient {
     public String AmbulanceType;
 
 
-    public MainPatient(String PatientName, String Pickup, String DropAt, String Date, String Time, String AmbulanceType) {
+    public MainPatient(String PatientName, String Pickup, String DropAt, String Date, String Time,String AmbulanceType) {
         this.PatientName = PatientName;
         this.Pickup = Pickup;
         this.DropAt = DropAt;
