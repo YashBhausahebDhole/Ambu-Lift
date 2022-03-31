@@ -4,7 +4,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -36,14 +39,26 @@ DatabaseReference reference;
         activepai.setAdapter(myArrayAdapter);
 
 
+
         reference = FirebaseDatabase.getInstance().getReference("Patients");
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for(DataSnapshot snapshot : dataSnapshot.getChildren()){
+
+                    String cpass=snapshot.child("pcpass").toString();
                     String value= snapshot.child("Main").child("PatientName").getValue().toString();
                     myArrayAdapter.add(value);
                     myArrayAdapter.notifyDataSetChanged();
+                    activepai.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                        @Override
+                        public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                            Intent intent=new Intent(ActivePatient.this,Patientlog.class);
+                            intent.putExtra("cpass",cpass);
+                            intent.putExtra("Name",value);
+                            startActivity(intent);
+                        }
+                    });
                 }
             }
 

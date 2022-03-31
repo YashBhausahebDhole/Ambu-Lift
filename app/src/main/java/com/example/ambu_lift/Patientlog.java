@@ -15,6 +15,8 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.jar.Attributes;
+
 public class Patientlog extends AppCompatActivity {
 
     Button hire,viewpai;
@@ -36,18 +38,17 @@ public class Patientlog extends AppCompatActivity {
         viewpai=findViewById(R.id.viewpai);
 
 
-     viewpai.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                String pcpass = "Atharva123";
+                String cpass=getIntent().getStringExtra("cpass").toString();
 
-                    readData(pcpass);
+
+                    readData(cpass);
                               }
 
-         private void readData(String pcpass) {
+         private void readData(String cpass) {
              reference = FirebaseDatabase.getInstance().getReference("Patients");
-             reference.child(pcpass).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+
+             reference.child(cpass).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
                  @Override
                  public void onComplete(@NonNull Task<DataSnapshot> task) {
 
@@ -65,7 +66,7 @@ public class Patientlog extends AppCompatActivity {
 
                  }
              });
-             reference.child(pcpass).child("Main").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+             reference.child(cpass).child("Main").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
                  @Override
                  public void onComplete(@NonNull Task<DataSnapshot> task) {
 
@@ -84,8 +85,7 @@ public class Patientlog extends AppCompatActivity {
                  }
              });
 
-         }
-     });
+
         hire.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
