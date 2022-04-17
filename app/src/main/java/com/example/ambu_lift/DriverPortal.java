@@ -39,7 +39,7 @@ public class DriverPortal<reference> extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent intent=new Intent(DriverPortal.this,ActivePatient.class);
-                              startActivity(intent);
+                startActivity(intent);
 
             }
         });

@@ -18,14 +18,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Ambu_Lift">
-        <activity
-            android:name=".ActivePatient"
-            android:exported="false" />
+
         <activity
             android:name=".PatientmainActivity"
             android:exported="false" />
         <activity
             android:name=".DriverPortal"
+            android:exported="false" />
+        <activity
+            android:name=".ActivePatient"
             android:exported="false" />
         <activity
             android:name=".Patientlog"

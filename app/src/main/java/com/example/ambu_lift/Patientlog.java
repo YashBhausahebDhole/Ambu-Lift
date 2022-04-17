@@ -39,11 +39,10 @@ public class Patientlog extends AppCompatActivity {
 
 
 
-                String cpass=getIntent().getStringExtra("cpass").toString();
 
-
-                    readData(cpass);
-                              }
+        String cpass=getIntent().getStringExtra("pass").toString();
+        readData(cpass);
+    }
 
          private void readData(String cpass) {
              reference = FirebaseDatabase.getInstance().getReference("Patients");

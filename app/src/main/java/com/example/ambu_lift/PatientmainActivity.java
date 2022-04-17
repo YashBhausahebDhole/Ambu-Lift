@@ -207,7 +207,7 @@ public class PatientmainActivity extends AppCompatActivity {
                         String pname = String.valueOf(dataSnapshot.child("pname").getValue());
                         String ppick = String.valueOf(dataSnapshot.child("paddress").getValue());
                         npname.setText(pname);
-                        npickup.append(ppick);
+                        npickup.setText(ppick);
 
 
 

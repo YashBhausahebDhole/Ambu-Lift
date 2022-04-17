@@ -24,10 +24,10 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 public class ActivePatient extends AppCompatActivity {
-ListView activepai;
+    ListView activepai;
 
-ArrayList<String> myArraylist=new ArrayList<>();
-DatabaseReference reference;
+    ArrayList<String> myArraylist=new ArrayList<>();
+    DatabaseReference reference;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,19 +46,21 @@ DatabaseReference reference;
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for(DataSnapshot snapshot : dataSnapshot.getChildren()){
 
-                    String cpass=snapshot.child("pcpass").toString();
-                    String value= snapshot.child("Main").child("PatientName").getValue().toString();
+                    String value= snapshot.child("pcpass").getValue().toString();
+
                     myArrayAdapter.add(value);
                     myArrayAdapter.notifyDataSetChanged();
                     activepai.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                         @Override
-                        public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                            String pai = parent.getItemAtPosition(position).toString();
+
                             Intent intent=new Intent(ActivePatient.this,Patientlog.class);
-                            intent.putExtra("cpass",cpass);
-                            intent.putExtra("Name",value);
+                            intent.putExtra("pass",pai);
                             startActivity(intent);
                         }
                     });
+
                 }
             }
 
@@ -67,5 +69,6 @@ DatabaseReference reference;
 
             }
         });
+
     }
 }
