@@ -3,6 +3,8 @@ package com.example.ambu_lift;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,11 +17,9 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import java.util.jar.Attributes;
-
 public class Patientlog extends AppCompatActivity {
 
-    Button hire,viewpai;
+    Button hire,callpai;
     TextView cpname,cpage,cpacontact,schedule,pickup,dropat;
     DatabaseReference reference;
 
@@ -35,7 +35,7 @@ public class Patientlog extends AppCompatActivity {
         pickup=findViewById(R.id.pickup);
         dropat=findViewById(R.id.dropat);
         hire=findViewById(R.id.hire);
-        viewpai=findViewById(R.id.viewpai);
+        callpai=findViewById(R.id.callpai);
 
 
 
@@ -61,6 +61,15 @@ public class Patientlog extends AppCompatActivity {
                             cpname.append(pname);
                             cpage.append(page);
                             cpacontact.append(pmbno);
+                         callpai.setOnClickListener(new View.OnClickListener() {
+                             @Override
+                             public void onClick(View view) {
+                                String s="tel:"+pmbno;
+                                 Intent i=new Intent(Intent.ACTION_DIAL);
+                                 i.setData(Uri.parse(s));
+                                 startActivity(i);
+                             }
+                         });
                                         }
 
                  }

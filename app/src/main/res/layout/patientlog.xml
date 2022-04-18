@@ -99,7 +99,7 @@
                 android:textStyle="bold" />
 
             <Button
-                android:id="@+id/viewpai"
+                android:id="@+id/callpai"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"

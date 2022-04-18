@@ -45,19 +45,18 @@ public class ActivePatient extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for(DataSnapshot snapshot : dataSnapshot.getChildren()){
-
                     String value= snapshot.child("pcpass").getValue().toString();
-
                     myArrayAdapter.add(value);
                     myArrayAdapter.notifyDataSetChanged();
                     activepai.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                         @Override
                         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                            String pai = parent.getItemAtPosition(position).toString();
 
+                            String pai = parent.getItemAtPosition(position).toString();
                             Intent intent=new Intent(ActivePatient.this,Patientlog.class);
                             intent.putExtra("pass",pai);
                             startActivity(intent);
+
                         }
                     });
 

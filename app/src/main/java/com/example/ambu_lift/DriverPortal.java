@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,7 +23,9 @@ import com.google.firebase.database.ValueEventListener;
 public class DriverPortal<reference> extends AppCompatActivity {
     Button  activepatient;
     TextView dname,atype;
+    ImageButton imgbtn;
     DatabaseReference reference;
+    Switch active;
 
 
     @Override
@@ -31,6 +35,28 @@ public class DriverPortal<reference> extends AppCompatActivity {
         activepatient=findViewById(R.id.activepatient);
         dname=findViewById(R.id.dname);
         atype=findViewById(R.id.atype);
+        imgbtn=findViewById(R.id.imgbtn);
+        active=findViewById(R.id.active);
+
+        active.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(active.isChecked()){
+                    activepatient.setVisibility(View.VISIBLE);
+                }
+                else{
+                    activepatient.setVisibility(View.GONE);
+                }
+            }
+        });
+
+        imgbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(DriverPortal.this,noti_emer.class);
+                startActivity(i);
+            }
+        });
 
         String cpass=getIntent().getStringExtra("apass").toString();
         readData(cpass);
@@ -66,6 +92,7 @@ public class DriverPortal<reference> extends AppCompatActivity {
 
             }
         });
+
     }
     }
 
