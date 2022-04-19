@@ -1,7 +1,6 @@
 package com.example.ambu_lift;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -10,11 +9,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -35,7 +30,7 @@ public class ActivePatient extends AppCompatActivity {
 
         ArrayAdapter<String> myArrayAdapter= new ArrayAdapter<String>(ActivePatient.this, android.R.layout.simple_expandable_list_item_1,myArraylist);
 
-        activepai=findViewById(R.id.activepai);
+        activepai=findViewById(R.id.emerpai);
         activepai.setAdapter(myArrayAdapter);
 
 

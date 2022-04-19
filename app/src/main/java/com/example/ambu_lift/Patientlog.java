@@ -28,14 +28,14 @@ public class Patientlog extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.patientlog);
 
-        cpname=findViewById(R.id.cpname);
+        cpname=findViewById(R.id.p);
         cpage=findViewById(R.id.cpage);
-        cpacontact=findViewById(R.id.cpacontact);
+        cpacontact=findViewById(R.id.mb);
         schedule=findViewById(R.id.schedule);
         pickup=findViewById(R.id.pickup);
         dropat=findViewById(R.id.dropat);
-        hire=findViewById(R.id.hire);
-        callpai=findViewById(R.id.callpai);
+        hire=findViewById(R.id.direction);
+        callpai=findViewById(R.id.callpatient);
 
 
 

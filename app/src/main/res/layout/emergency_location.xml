@@ -26,7 +26,7 @@
 
         android:layout_marginEnd="80dp"
         android:layout_marginBottom="39dp"
-        android:backgroundTint="#33DBC2"
+        android:backgroundTint="#EF0909"
         android:text="Confirm Location"
         android:textColor="#221D1D"
         app:rippleColor="#D00D0D" />

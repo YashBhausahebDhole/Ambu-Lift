@@ -86,7 +86,15 @@ public class DriverPortal<reference> extends AppCompatActivity {
                         String AType = String.valueOf(dataSnapshot.child("AmbulanceType").getValue());
                         dname.setText(name);
                         atype.setText(AType);
-
+                        String a=atype.getText().toString();
+                    imgbtn.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent i=new Intent(DriverPortal.this,noti_emer.class);
+                            i.putExtra("amtype",a);
+                            startActivity(i);
+                        }
+                    });
 
                 }
 

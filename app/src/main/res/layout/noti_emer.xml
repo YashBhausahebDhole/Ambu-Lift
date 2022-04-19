@@ -8,7 +8,7 @@
     tools:context=".noti_emer">
 
     <ListView
-        android:id="@+id/activepai"
+        android:id="@+id/emerpai"
         android:layout_width="409dp"
         android:layout_height="729dp"
         android:layout_alignParentTop="true"

@@ -39,7 +39,7 @@ public class fragment2 extends Fragment {
         View v = inflater.inflate(R.layout.fragment_fragment2, container, false);
         paireg = v.findViewById(R.id.paireg);
         logbtnp = v.findViewById(R.id.logbtnp);
-        forgotpassp=v.findViewById(R.id.logbtnp);
+        forgotpassp=v.findViewById(R.id.fgbtn);
         patmail=v.findViewById(R.id.patmail);
         patpass=v.findViewById(R.id.patpass);
         pbarp=v.findViewById(R.id.pbarp);

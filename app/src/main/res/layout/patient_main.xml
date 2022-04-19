@@ -130,7 +130,7 @@
             android:layout_marginTop="53dp"
             android:layout_marginEnd="162dp"
             android:layout_marginBottom="8dp"
-            android:backgroundTint="@color/design_default_color_secondary"
+            android:backgroundTint="#EF0909"
             android:text="BOOK"
             android:textColor="#020202" />
 

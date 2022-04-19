@@ -43,7 +43,7 @@ public class fragment3 extends Fragment{
         ambumail = v.findViewById(R.id.ambumail);
         pbar=v.findViewById(R.id.pbar);
         mAuth = FirebaseAuth.getInstance();
-        forgotpass = v.findViewById(R.id.logbtn);
+        forgotpass = v.findViewById(R.id.fgbtn);
 
         conambu.setOnClickListener(new View.OnClickListener() {
             @Override
