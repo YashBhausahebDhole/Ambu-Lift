@@ -69,10 +69,10 @@ public class emergency_alert extends AppCompatActivity {
                     direction.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-                            Intent i=new Intent(emergency_alert.this,directions.class);
-                            i.putExtra("Lati",lati);
-                            i.putExtra("long",longi);
-                            startActivity(i);
+//                            Intent i=new Intent(emergency_alert.this,directions.class);
+//                            i.putExtra("Lati",lati);
+//                            i.putExtra("long",longi);
+//                            startActivity(i);
                         }
                     });
                 }
