@@ -19,7 +19,7 @@
         android:layout_marginBottom="25dp"
         android:fontFamily="sans-serif-smallcaps"
         android:gravity="center"
-        android:text="Hire Patient"
+        android:text="Pickup Patient"
         android:textColor="#0E0E0E"
         android:textColorHighlight="#13DCC4"
         android:textColorHint="#000000"
@@ -41,133 +41,33 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/schedule"
-                android:layout_width="258dp"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/mb"
-                android:layout_alignParentEnd="true"
-                android:layout_marginTop="12dp"
-                android:layout_marginEnd="9dp"
-                android:textColor="#070101"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/dropat"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/pickup"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginEnd="0dp"
-                android:text="Drop At: "
-                android:textColor="#070101"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/l1"
-                android:layout_width="99dp"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/mb"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginEnd="267dp"
-                android:text="Schedule: "
-                android:textColor="#070101"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/pickup"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/l1"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginEnd="0dp"
-                android:text="Pickup From: "
-                android:textColor="#070101"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
             <Button
                 android:id="@+id/callpatient"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="235dp"
+                android:layout_height="72dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="24dp"
-                android:layout_marginEnd="196dp"
-                android:layout_marginBottom="8dp"
+                android:layout_marginStart="72dp"
+                android:layout_marginEnd="71dp"
+                android:layout_marginBottom="197dp"
                 android:backgroundTint="#E71313"
-                android:text="Call Patient" />
-
-            <TextView
-                android:id="@+id/cpage"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/p"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginEnd="0dp"
-                android:text="Age: "
-                android:textColor="#060101"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/p"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginEnd="0dp"
-                android:text="Patient Name: "
-                android:textColor="#070101"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/mb"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/cpage"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginEnd="0dp"
-                android:text="Patient Contact No: "
-                android:textColor="#070101"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                android:text="Call Patient"
+                android:textSize="20sp" />
 
             <Button
-                android:id="@+id/direction"
-                android:layout_width="157dp"
-                android:layout_height="wrap_content"
+                android:id="@+id/pickup"
+                android:layout_width="234dp"
+                android:layout_height="84dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="195dp"
-                android:layout_marginEnd="26dp"
-                android:layout_marginBottom="9dp"
+                android:layout_marginStart="73dp"
+                android:layout_marginEnd="71dp"
+                android:layout_marginBottom="49dp"
                 android:backgroundTint="#E71313"
-                android:text="Hire Patient" />
+                android:text="Pickup Patient"
+                android:textSize="20sp" />
 
         </RelativeLayout>
     </androidx.cardview.widget.CardView>

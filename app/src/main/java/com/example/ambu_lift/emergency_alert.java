@@ -30,7 +30,7 @@ public class emergency_alert extends AppCompatActivity {
         p=findViewById(R.id.p);
         mb=findViewById(R.id.mb);
         si=findViewById(R.id.si);
-        direction=findViewById(R.id.direction);
+        direction=findViewById(R.id.pickup);
         callpatient=findViewById(R.id.callpatient);
         String aname=getIntent().getStringExtra("name").toString();
         readData(aname);

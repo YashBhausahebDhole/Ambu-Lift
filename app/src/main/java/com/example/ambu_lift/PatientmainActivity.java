@@ -22,9 +22,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -43,6 +47,8 @@ public class PatientmainActivity extends AppCompatActivity {
     AutoCompleteTextView autoCompletetxt;
     ArrayAdapter<String> adapterItems;
     int tHour,tMiniute;
+    String uid;
+    FirebaseUser user;
 
 
 
@@ -59,11 +65,33 @@ public class PatientmainActivity extends AppCompatActivity {
        conambu=findViewById(R.id.conambu);
         npb=findViewById(R.id.npb);
         autoCompletetxt = findViewById(R.id.nambu);
-        String pcpass=getIntent().getStringExtra("pass").toString();
-        readData(pcpass);
+//        String pcpass=getIntent().getStringExtra("pass").toString();
+//        readData(pcpass);
 
         adapterItems = new ArrayAdapter<String>(this,R.layout.list_item,items);
         autoCompletetxt.setAdapter(adapterItems);
+
+        user= FirebaseAuth.getInstance().getCurrentUser();
+        uid=user.getUid();
+
+
+        reference = FirebaseDatabase.getInstance().getReference("Patients");
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                Toast.makeText(PatientmainActivity.this,"Successfully Read",Toast.LENGTH_SHORT).show();
+
+                String pname = snapshot.child(uid).child("pname").getValue(String.class);
+                String ppick = snapshot.child(uid).child("paddress").getValue(String.class);
+                npname.setText(pname);
+                npickup.setText(ppick);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(PatientmainActivity.this, "Network Issue", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         autoCompletetxt.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -107,7 +135,7 @@ public class PatientmainActivity extends AppCompatActivity {
                             npb.setVisibility(View.VISIBLE);
                             MainPatient mainPatient = new MainPatient(Patient, Pickup, DropAt, Date, Time,AmbulanceType);
 
-                            FirebaseDatabase.getInstance().getReference("Patients").child(pcpass).child("Main")
+                            FirebaseDatabase.getInstance().getReference("Patients").child(uid).child("Booking")
                                     .setValue(mainPatient).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
@@ -191,39 +219,39 @@ public class PatientmainActivity extends AppCompatActivity {
     });
 
     }
-
-    private void readData(String pcpass) {
-        reference = FirebaseDatabase.getInstance().getReference("Patients");
-        reference.child(pcpass).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<DataSnapshot> task) {
-
-                if (task.isSuccessful()){
-
-                    if (task.getResult().exists()){
-
-                        Toast.makeText(PatientmainActivity.this,"Successfully Read",Toast.LENGTH_SHORT).show();
-                        DataSnapshot dataSnapshot = task.getResult();
-                        String pname = String.valueOf(dataSnapshot.child("pname").getValue());
-                        String ppick = String.valueOf(dataSnapshot.child("paddress").getValue());
-                        npname.setText(pname);
-                        npickup.setText(ppick);
-
-
-
-                    }else {
-
-                        Toast.makeText(PatientmainActivity.this,"User Doesn't Exist",Toast.LENGTH_SHORT).show();
-
-                    }
-
-
-                }else {
-
-                    Toast.makeText(PatientmainActivity.this,"Failed to read",Toast.LENGTH_SHORT).show();
-                }
-
-            }
-        });
-    }
+//
+//    private void readData(String pcpass) {
+//
+//        reference.child(pcpass).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+//            @Override
+//            public void onComplete(@NonNull Task<DataSnapshot> task) {
+//
+//                if (task.isSuccessful()){
+//
+//                    if (task.getResult().exists()){
+//
+//                        Toast.makeText(PatientmainActivity.this,"Successfully Read",Toast.LENGTH_SHORT).show();
+//                        DataSnapshot dataSnapshot = task.getResult();
+//                        String pname = String.valueOf(dataSnapshot.child("pname").getValue());
+//                        String ppick = String.valueOf(dataSnapshot.child("paddress").getValue());
+//                        npname.setText(pname);
+//                        npickup.setText(ppick);
+//
+//
+//
+//                    }else {
+//
+//                        Toast.makeText(PatientmainActivity.this,"User Doesn't Exist",Toast.LENGTH_SHORT).show();
+//
+//                    }
+//
+//
+//                }else {
+//
+//                    Toast.makeText(PatientmainActivity.this,"Failed to read",Toast.LENGTH_SHORT).show();
+//                }
+//
+//            }
+//        });
+//    }
 }

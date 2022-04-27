@@ -119,8 +119,8 @@ public class paireg extends AppCompatActivity {
                              if (task.isSuccessful()) {
                                  Paitient patient = new Paitient(pname, pmbno, pmail, pcpass, paddress, pAge, pgender);
 
-                                 FirebaseDatabase.getInstance().getReference("Patients").child(pcpass)
-//                                         .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                 FirebaseDatabase.getInstance().getReference("Patients")
+                                         .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                          .setValue(patient).addOnCompleteListener(new OnCompleteListener<Void>() {
                                      @Override
                                      public void onComplete(@NonNull Task<Void> task) {
