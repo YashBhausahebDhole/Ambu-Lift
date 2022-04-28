@@ -79,8 +79,6 @@ public class PatientmainActivity extends AppCompatActivity {
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                Toast.makeText(PatientmainActivity.this,"Successfully Read",Toast.LENGTH_SHORT).show();
-
                 String pname = snapshot.child(uid).child("pname").getValue(String.class);
                 String ppick = snapshot.child(uid).child("paddress").getValue(String.class);
                 npname.setText(pname);
@@ -143,7 +141,7 @@ public class PatientmainActivity extends AppCompatActivity {
                                         Toast.makeText(PatientmainActivity.this, "You will be Picked up at given schedule", Toast.LENGTH_SHORT).show();
                                         Toast.makeText(PatientmainActivity.this, "Driver Details send by Text", Toast.LENGTH_SHORT).show();
                                         npb.setVisibility(View.GONE);
-                                        Intent intent =new Intent(PatientmainActivity.this,fragment2.class);
+                                        Intent intent =new Intent(PatientmainActivity.this,MainActivity.class);
                                         startActivity(intent);
                                     } else {
                                         Toast.makeText(PatientmainActivity.this, "Fail to Book Ambulance ", Toast.LENGTH_SHORT).show();

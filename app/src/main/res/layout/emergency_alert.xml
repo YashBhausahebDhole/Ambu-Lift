@@ -107,11 +107,11 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="195dp"
-                android:layout_marginEnd="26dp"
+                android:layout_marginStart="202dp"
+                android:layout_marginEnd="19dp"
                 android:layout_marginBottom="9dp"
                 android:backgroundTint="#E71313"
-                android:text="Directions" />
+                android:text="Confirm Patient" />
 
         </RelativeLayout>
     </androidx.cardview.widget.CardView>

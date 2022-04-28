@@ -20,7 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class emergency_alert extends AppCompatActivity {
 
     TextView p,mb,si;
-    Button callpatient,direction;
+    Button callpatient,conp;
     DatabaseReference reference;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +30,7 @@ public class emergency_alert extends AppCompatActivity {
         p=findViewById(R.id.p);
         mb=findViewById(R.id.mb);
         si=findViewById(R.id.si);
-        direction=findViewById(R.id.pickup);
+        conp=findViewById(R.id.pickup);
         callpatient=findViewById(R.id.callpatient);
         String aname=getIntent().getStringExtra("name").toString();
         readData(aname);
@@ -53,6 +53,7 @@ public class emergency_alert extends AppCompatActivity {
                     String psit = String.valueOf(dataSnapshot.child("Situation").getValue());
                     String lati = String.valueOf(dataSnapshot.child("Latitude").getValue());
                     String longi = String.valueOf(dataSnapshot.child("Longitude").getValue());
+//
                     p.append(pname);
                     mb.append(pmbno);
                     si.append(psit);
@@ -65,16 +66,17 @@ public class emergency_alert extends AppCompatActivity {
                             startActivity(i);
                         }
                     });
-
-                    direction.setOnClickListener(new View.OnClickListener() {
+                    conp.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-//                            Intent i=new Intent(emergency_alert.this,directions.class);
-//                            i.putExtra("Lati",lati);
-//                            i.putExtra("long",longi);
-//                            startActivity(i);
+                            Intent i=new Intent(emergency_alert.this,drpact.class);
+                            i.putExtra("Lati",lati);
+                            i.putExtra("Long",longi);
+                            startActivity(i);
                         }
                     });
+
+
                 }
 
             }

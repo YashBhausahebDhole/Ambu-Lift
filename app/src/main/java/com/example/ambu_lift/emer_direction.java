@@ -23,16 +23,16 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
 
-public class emerlocation extends AppCompatActivity {
+public class emer_direction extends AppCompatActivity {
     FusedLocationProviderClient client;
     SupportMapFragment supportMapFragment;
-    Button conloc;
+    Button drp;
 
     /* access modifiers changed from: protected */
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.emergency_location);
-        conloc=findViewById(R.id.drp);
+        drp=findViewById(R.id.drp);
 
 
         this.supportMapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.google_map);
@@ -58,7 +58,7 @@ public class emerlocation extends AppCompatActivity {
         this.client.getLastLocation().addOnSuccessListener(new OnSuccessListener<Location>() {
             public void onSuccess(final Location location) {
                 if (location != null) {
-                    emerlocation.this.supportMapFragment.getMapAsync(new OnMapReadyCallback() {
+                    emer_direction.this.supportMapFragment.getMapAsync(new OnMapReadyCallback() {
                         public void onMapReady(GoogleMap googleMap) {
 
                             LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
@@ -67,17 +67,15 @@ public class emerlocation extends AppCompatActivity {
                             googleMap.addMarker(options);
 
 
-                            conloc.setOnClickListener(new View.OnClickListener() {
+                            drp.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {
-                                    String lon=(String.valueOf(location.getLongitude()));
-                                    String lat=(String.valueOf(location.getLatitude()));
-                                    Toast.makeText(emerlocation.this, "Patient Location Fetched Successfully"+"\nLatitude= "+lat+"\nLongitude= "+lon, Toast.LENGTH_SHORT).show();
+//                                    String lon=(String.valueOf(location.getLongitude()));
+//                                    String lat=(String.valueOf(location.getLatitude()));
+                                    Toast.makeText(emer_direction.this, "Patient Dropped Successfully", Toast.LENGTH_SHORT).show();
 
-                                    Intent intent=new Intent(emerlocation.this,EmergencyBook.class);
-                                    intent.putExtra("Lati",lat);
-                                    intent.putExtra("Longi",lon);
-                                    startActivity(intent);
+                                    Intent intent=new Intent(emer_direction.this,MainActivity.class);
+                                     startActivity(intent);
 
                                 }
                             });
