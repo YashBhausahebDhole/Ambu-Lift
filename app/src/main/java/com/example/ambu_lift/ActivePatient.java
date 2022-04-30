@@ -48,6 +48,7 @@ public class ActivePatient extends AppCompatActivity {
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
                 for(DataSnapshot snapshot : dataSnapshot.getChildren()){
 
                     String pname = snapshot.child("pname").getValue(String.class);
@@ -63,18 +64,18 @@ public class ActivePatient extends AppCompatActivity {
                     myArrayAdapter.notifyDataSetChanged();
 
 
-//                    activepai.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//                        @Override
-//                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//
-//                            String pai = parent.getItemAtPosition(position).toString();
-//
-//                            Intent intent=new Intent(ActivePatient.this,Patientlog.class);
-//                            intent.putExtra("mbno",pno);
-//                            startActivity(intent);
-//
-//                        }
-//                    });
+                    activepai.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                        @Override
+                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                            String pai = parent.getItemAtPosition(position).toString();
+
+                            Intent intent=new Intent(ActivePatient.this,Patientlog.class);
+                            intent.putExtra("mbno",pno);
+                            startActivity(intent);
+
+                        }
+                    });
 
                 }
             }
