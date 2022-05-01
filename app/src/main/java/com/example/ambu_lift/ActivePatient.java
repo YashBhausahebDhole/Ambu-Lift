@@ -59,8 +59,10 @@ public class ActivePatient extends AppCompatActivity {
                     String pick=snapshot.child("Booking").child("Pickup").getValue(String.class);
                     String drop=snapshot.child("Booking").child("DropAt").getValue(String.class);
                     String pno=snapshot.child("pmbno").getValue(String.class);
-                    myArrayAdapter.add("Name: "+pname+"\nSchedule: "+date+", At "+time+"\nRoute: "
-                            +pick+" to "+drop+"\n ______________________________ ");
+                    String value="Mobile No: "+pno+"    Name: "+pname+"\nSchedule: "+date+", At "+time+"\nRoute: "
+                            +pick+" to "+drop+"\n ____________________________________________________________________ ";
+                    myArrayAdapter.add(value);
+
                     myArrayAdapter.notifyDataSetChanged();
 
 
@@ -69,9 +71,9 @@ public class ActivePatient extends AppCompatActivity {
                         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                             String pai = parent.getItemAtPosition(position).toString();
-
+                            String mno=pai.substring(11, 22);
                             Intent intent=new Intent(ActivePatient.this,Patientlog.class);
-                            intent.putExtra("mbno",pno);
+                            intent.putExtra("mbno",mno);
                             startActivity(intent);
 
                         }

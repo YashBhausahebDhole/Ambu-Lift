@@ -20,13 +20,11 @@ public class drpact extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
     private ActivityDrpactBinding binding;
-    Button condor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-//        condor =findViewById(R.id.drppai);
         binding = ActivityDrpactBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
@@ -34,14 +32,7 @@ public class drpact extends FragmentActivity implements OnMapReadyCallback {
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-//        condor.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Toast.makeText(drpact.this, "Drop Successful", Toast.LENGTH_SHORT).show();
-//                Intent i=new Intent(drpact.this,MainActivity.class);
-//                startActivity(i);
-//            }
-//        });
+
     }
 
     /**
@@ -64,5 +55,12 @@ public class drpact extends FragmentActivity implements OnMapReadyCallback {
         mMap.addMarker(new MarkerOptions().position(sydney).title("Patient Location"));
          mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
 
+
+    }
+
+    public void avf(View view) {
+        Toast.makeText(drpact.this, "Drop Successful", Toast.LENGTH_SHORT).show();
+                Intent i=new Intent(drpact.this,MainActivity.class);
+                startActivity(i);
     }
 }
