@@ -27,7 +27,8 @@ public class noti_emer extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.noti_emer);
 
-
+        String dname=getIntent().getStringExtra("dname").toString();
+        String mbno=getIntent().getStringExtra("mbno").toString();
         ArrayAdapter<String> myArrayAdapter= new ArrayAdapter<String>(noti_emer.this, android.R.layout.simple_expandable_list_item_1,myArraylist);
         emerpai=findViewById(R.id.emerpai);
         emerpai.setAdapter(myArrayAdapter);
@@ -51,6 +52,8 @@ public class noti_emer extends AppCompatActivity {
                             String nam = parent.getItemAtPosition(position).toString();
                             Intent intent=new Intent(noti_emer.this,emergency_alert.class);
                             intent.putExtra("name",nam);
+                            intent.putExtra("dname",dname);
+                            intent.putExtra("mbno",mbno);
                             startActivity(intent);
 
                         }

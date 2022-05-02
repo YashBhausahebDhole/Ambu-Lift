@@ -60,15 +60,7 @@ public class DriverPortal<reference> extends AppCompatActivity {
 
         String cpass=getIntent().getStringExtra("apass").toString();
         readData(cpass);
-        activepatient.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-                Intent intent=new Intent(DriverPortal.this,ActivePatient.class);
-                startActivity(intent);
-
-            }
-        });
 
     }
 
@@ -84,6 +76,7 @@ public class DriverPortal<reference> extends AppCompatActivity {
                         DataSnapshot dataSnapshot = task.getResult();
                         String name = String.valueOf(dataSnapshot.child("name").getValue());
                         String AType = String.valueOf(dataSnapshot.child("AmbulanceType").getValue());
+                        String mbno = String.valueOf(dataSnapshot.child("mbno").getValue());
                         dname.setText(name);
                         atype.setText(AType);
                         String a=atype.getText().toString();
@@ -92,7 +85,20 @@ public class DriverPortal<reference> extends AppCompatActivity {
                         public void onClick(View view) {
                             Intent i=new Intent(DriverPortal.this,noti_emer.class);
                             i.putExtra("amtype",a);
+                            i.putExtra("dname",name);
+                            i.putExtra("mbno",mbno);
                             startActivity(i);
+                        }
+                    });
+                    activepatient.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+
+                            Intent intent=new Intent(DriverPortal.this,ActivePatient.class);
+                            intent.putExtra("dname",name);
+                            intent.putExtra("mbno",mbno);
+                            startActivity(intent);
+
                         }
                     });
 

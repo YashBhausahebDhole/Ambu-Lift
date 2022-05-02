@@ -32,11 +32,10 @@ public class ActivePatient extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.active_patient);
 
+        String dname=getIntent().getStringExtra("dname").toString();
+        String mbno=getIntent().getStringExtra("mbno").toString();
         ArrayAdapter<String> myArrayAdapter= new ArrayAdapter<String>(ActivePatient.this, android.R.layout.simple_expandable_list_item_1,myArraylist);
 
-//        rem=findViewById(R.id.rem);
-//        rem=findViewById(R.id.select);
-//        rem=findViewById(R.id.pic);
         activepai=findViewById(R.id.emerpai);
         activepai.setAdapter(myArrayAdapter);
 
@@ -74,6 +73,8 @@ public class ActivePatient extends AppCompatActivity {
                             String mno=pai.substring(11, 22);
                             Intent intent=new Intent(ActivePatient.this,Patientlog.class);
                             intent.putExtra("mbno",mno);
+                            intent.putExtra("dname",dname);
+                            intent.putExtra("mbn",mbno);
                             startActivity(intent);
 
                         }

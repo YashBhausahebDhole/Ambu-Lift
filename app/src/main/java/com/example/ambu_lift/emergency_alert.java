@@ -3,9 +3,11 @@ package com.example.ambu_lift;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.telephony.SmsManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -30,14 +32,16 @@ public class emergency_alert extends AppCompatActivity {
         p=findViewById(R.id.p);
         mb=findViewById(R.id.mb);
         si=findViewById(R.id.si);
-        conp=findViewById(R.id.pickup);
+        conp=findViewById(R.id.cnpa);
         callpatient=findViewById(R.id.callpatient);
         String aname=getIntent().getStringExtra("name").toString();
-        readData(aname);
+        String dname=getIntent().getStringExtra("dname").toString();
+        String mbno=getIntent().getStringExtra("mbno").toString();
+        readData(aname,dname,mbno);
         
     }
 
-    private void readData(String aname) {
+    private void readData(String aname,String dname,String mbno) {
         reference = FirebaseDatabase.getInstance().getReference("Emergency");
 
         reference.child(aname).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
@@ -61,7 +65,7 @@ public class emergency_alert extends AppCompatActivity {
                         @Override
                         public void onClick(View view) {
                             String s="tel:"+pmbno;
-                            Intent i=new Intent(Intent.ACTION_DIAL);
+                            Intent i=new Intent(Intent.ACTION_CALL);
                             i.setData(Uri.parse(s));
                             startActivity(i);
                         }
@@ -69,8 +73,18 @@ public class emergency_alert extends AppCompatActivity {
                     conp.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
+                            String msg=("Dear Concern,\nYou will be pickup by ambulance driver "+dname+" with contact no: "+mbno+"\nvery soon \nAmbuLift");
+
+                            try {
+                                SmsManager smsManager=SmsManager.getDefault();
+                                smsManager.sendTextMessage(pmbno,null,msg,null,null);
+                                Toast.makeText(getApplicationContext(),"Message Sent",Toast.LENGTH_LONG).show();
+                            }catch (Exception e)
+                            {
+                                Toast.makeText(getApplicationContext(),"Some Error occurred",Toast.LENGTH_LONG).show();
+                            }
                             Intent i=new Intent(emergency_alert.this,drpact.class);
-                            i.putExtra("Lati",lati);
+                                i.putExtra("Lati",lati);
                             i.putExtra("Long",longi);
                             startActivity(i);
                         }
