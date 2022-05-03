@@ -95,8 +95,8 @@ public class DriverPortal<reference> extends AppCompatActivity {
                         public void onClick(View view) {
 
                             Intent intent=new Intent(DriverPortal.this,ActivePatient.class);
-                            intent.putExtra("dname",name);
-                            intent.putExtra("mbno",mbno);
+                            intent.putExtra("drivername",name);
+                            intent.putExtra("dmobile",mbno);
                             startActivity(intent);
 
                         }

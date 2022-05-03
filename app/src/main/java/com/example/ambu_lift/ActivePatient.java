@@ -32,8 +32,8 @@ public class ActivePatient extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.active_patient);
 
-        String dname=getIntent().getStringExtra("dname").toString();
-        String mbno=getIntent().getStringExtra("mbno").toString();
+        String drivername=getIntent().getStringExtra("drivername").toString();
+        String dmobile=getIntent().getStringExtra("dmobile").toString();
         ArrayAdapter<String> myArrayAdapter= new ArrayAdapter<String>(ActivePatient.this, android.R.layout.simple_expandable_list_item_1,myArraylist);
 
         activepai=findViewById(R.id.emerpai);
@@ -73,8 +73,8 @@ public class ActivePatient extends AppCompatActivity {
                             String mno=pai.substring(11, 22);
                             Intent intent=new Intent(ActivePatient.this,Patientlog.class);
                             intent.putExtra("mbno",mno);
-                            intent.putExtra("dname",dname);
-                            intent.putExtra("mbn",mbno);
+                            intent.putExtra("name",drivername);
+                            intent.putExtra("mobile",dmobile);
                             startActivity(intent);
 
                         }
