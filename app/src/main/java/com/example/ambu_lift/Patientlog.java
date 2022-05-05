@@ -1,8 +1,12 @@
 package com.example.ambu_lift;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.telephony.SmsManager;
@@ -14,9 +18,9 @@ import android.widget.Toast;
 import com.google.firebase.database.DatabaseReference;
 
 public class Patientlog extends AppCompatActivity {
-
+    private static final int MY_PERMISSIONS_REQUEST_SEND_SMS =0 ;
     Button pickup,callpai;
-    TextView name,mobile1;
+
 
 
 
@@ -52,6 +56,7 @@ public class Patientlog extends AppCompatActivity {
         pickup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                sendSMSMessage();
                 String msg1 = ("Dear Patient,\nYou will be pickup by from your given pickup address  by ambulance driver "+drivername+" with contact no: "+dmobile+"\n at given schedule \nAmbuLift");
 
                 try {
@@ -61,11 +66,28 @@ public class Patientlog extends AppCompatActivity {
                 } catch (Exception e) {
                     Toast.makeText(getApplicationContext(), "Some Error occurred", Toast.LENGTH_LONG).show();
                 }
-                Toast.makeText(Patientlog.this, "Patient Confirmed", Toast.LENGTH_SHORT).show();
-                Intent i = new Intent(Patientlog.this, MainActivity.class);
-                startActivity(i);
+
             }
         });
+    }
+
+    protected void sendSMSMessage() {
+        if (ContextCompat.checkSelfPermission(this,
+                Manifest.permission.SEND_SMS)
+                != PackageManager.PERMISSION_GRANTED) {
+            if (ActivityCompat.shouldShowRequestPermissionRationale(this,
+                    Manifest.permission.SEND_SMS)) {
+            } else {
+                ActivityCompat.requestPermissions(this,
+                        new String[]{Manifest.permission.SEND_SMS},
+                        MY_PERMISSIONS_REQUEST_SEND_SMS);
+            }
+        }
+        else {
+            Toast.makeText(Patientlog.this, "Patient Confirmed", Toast.LENGTH_SHORT).show();
+            Intent i = new Intent(Patientlog.this, MainActivity.class);
+            startActivity(i);
+        }
     }
 
 }

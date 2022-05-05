@@ -2,9 +2,13 @@ package com.example.ambu_lift;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
+import android.Manifest;
 import android.app.PendingIntent;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.telephony.SmsManager;
@@ -20,7 +24,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class emergency_alert extends AppCompatActivity {
-
+    private static final int MY_PERMISSIONS_REQUEST_SEND_SMS =0 ;
     TextView p,mb,si;
     Button callpatient,conp;
     DatabaseReference reference;
@@ -73,6 +77,7 @@ public class emergency_alert extends AppCompatActivity {
                     conp.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
+                            sendSMSMessage(lati,longi);
                             String msg=("Dear Concern,\nYou will be pickup by ambulance driver "+dname+" with contact no: "+mbno+"\nvery soon \nAmbuLift");
 
                             try {
@@ -83,10 +88,7 @@ public class emergency_alert extends AppCompatActivity {
                             {
                                 Toast.makeText(getApplicationContext(),"Some Error occurred",Toast.LENGTH_LONG).show();
                             }
-                            Intent i=new Intent(emergency_alert.this,drpact.class);
-                                i.putExtra("Lati",lati);
-                            i.putExtra("Long",longi);
-                            startActivity(i);
+
                         }
                     });
 
@@ -95,5 +97,25 @@ public class emergency_alert extends AppCompatActivity {
 
             }
         });
+    }
+
+    protected void sendSMSMessage(String lati,String longi) {
+        if (ContextCompat.checkSelfPermission(this,
+                Manifest.permission.SEND_SMS)
+                != PackageManager.PERMISSION_GRANTED) {
+            if (ActivityCompat.shouldShowRequestPermissionRationale(this,
+                    Manifest.permission.SEND_SMS)) {
+            } else {
+                ActivityCompat.requestPermissions(this,
+                        new String[]{Manifest.permission.SEND_SMS},
+                        MY_PERMISSIONS_REQUEST_SEND_SMS);
+            }
+        }
+        else {
+            Intent i=new Intent(emergency_alert.this,drpact.class);
+            i.putExtra("Lati",lati);
+            i.putExtra("Long",longi);
+            startActivity(i);
+        }
     }
 }
