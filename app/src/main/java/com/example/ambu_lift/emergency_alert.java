@@ -41,6 +41,7 @@ public class emergency_alert extends AppCompatActivity {
         String aname=getIntent().getStringExtra("name").toString();
         String dname=getIntent().getStringExtra("dname").toString();
         String mbno=getIntent().getStringExtra("mbno").toString();
+
         readData(aname,dname,mbno);
         
     }
@@ -77,7 +78,7 @@ public class emergency_alert extends AppCompatActivity {
                     conp.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-                            sendSMSMessage(lati,longi);
+                            sendSMSMessage(lati,longi,aname);
                             String msg=("Dear Concern,\nYou will be pickup by ambulance driver "+dname+" with contact no: "+mbno+"\nvery soon \nAmbuLift");
 
                             try {
@@ -91,15 +92,12 @@ public class emergency_alert extends AppCompatActivity {
 
                         }
                     });
-
-
                 }
-
             }
         });
     }
 
-    protected void sendSMSMessage(String lati,String longi) {
+    protected void sendSMSMessage(String lati,String longi,String aname) {
         if (ContextCompat.checkSelfPermission(this,
                 Manifest.permission.SEND_SMS)
                 != PackageManager.PERMISSION_GRANTED) {
@@ -112,10 +110,12 @@ public class emergency_alert extends AppCompatActivity {
             }
         }
         else {
+            FirebaseDatabase.getInstance().getReference().child("Emergency").child(aname).removeValue();
             Intent i=new Intent(emergency_alert.this,drpact.class);
             i.putExtra("Lati",lati);
             i.putExtra("Long",longi);
             startActivity(i);
+
         }
     }
 }

@@ -63,8 +63,10 @@ public class emer_direction extends AppCompatActivity {
 
                             LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
                             MarkerOptions options = new MarkerOptions().position(latLng).title("Patient Location");
-                            googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 15.0f));
                             googleMap.addMarker(options);
+                            googleMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
+                            googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 17.0f));
+
 
 
                             drp.setOnClickListener(new View.OnClickListener() {
@@ -74,7 +76,7 @@ public class emer_direction extends AppCompatActivity {
 //                                    String lat=(String.valueOf(location.getLatitude()));
                                     Toast.makeText(emer_direction.this, "Patient Dropped Successfully", Toast.LENGTH_SHORT).show();
 
-                                    Intent intent=new Intent(emer_direction.this,MainActivity.class);
+                                    Intent intent=new Intent(emer_direction.this,DriverPortal.class);
                                      startActivity(intent);
 
                                 }
